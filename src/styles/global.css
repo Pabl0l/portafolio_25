@@ -1,0 +1,50 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-matrix-bg: #0D0D0D;
+  --color-matrix-primary: #39ff14;
+  --color-matrix-accent: #8A2BE2;
+
+  --font-matrix: 'Jacquard 12', system-ui, sans-serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0D0D0D;
+  /* Fallback */
+  color: var(--color-matrix-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  /* Ensure body doesn't cover canvas */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-matrix-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a4d1a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-matrix-primary);
+}
