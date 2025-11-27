@@ -1,0 +1,90 @@
+---
+---
+
+<section class="education" id="education">
+  <div class="container">
+    <h2 class="section-title glitch-text" data-text="// Education">// Education</h2>
+    
+    <div class="education-item">
+      <div class="education-header">
+        <h3>Técnico en Mantenimiento de Sistemas Informáticos</h3>
+        <span class="status">En prácticas</span>
+      </div>
+      <p class="institution">Institución Universitaria de Barranquilla</p>
+      <p class="period">2025-10 : 2026-04</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .education {
+    min-height: 50vh;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-matrix);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-matrix-primary);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+
+  .education-item {
+    background: rgba(57, 255, 20, 0.05);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .education-item:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+
+  .education-item h3 {
+    font-family: var(--font-matrix);
+    color: var(--color-matrix-primary);
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .status {
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid var(--color-matrix-accent);
+    color: var(--color-matrix-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .institution {
+    color: #fff;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .period {
+    color: #aaa;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

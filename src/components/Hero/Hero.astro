@@ -1,0 +1,264 @@
+---
+import profileImg from '../../assets/images/Whisk_0a6bbccb60ff5e6bbcc4a05b767eeb27eg.png';
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="profile-image-container">
+      <img src={profileImg.src} alt="Juan Pablo Olivera" class="profile-image" />
+      <div class="image-glitch"></div>
+    </div>
+    
+    <div class="hero-text">
+      <h1 class="glitch-text" data-text="Juan Pablo Olivera Mendoza">
+        Juan Pablo Olivera Mendoza
+      </h1>
+      
+      <p class="title">Técnico en Mantenimiento de Sistemas Informáticos</p>
+      <p class="subtitle">(Estudiante en prácticas)</p>
+      
+      <p class="motto glitch-text" data-text="i hate problems so i will fix them one by one">
+        i hate problems so i will fix them one by one
+      </p>
+      
+      <button class="contact-button" id="copyEmailBtn">
+        <span class="terminal-prompt">$</span> 
+        <span id="emailText">Copy Email</span>
+        <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--color-matrix-primary);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .profile-image:hover {
+    box-shadow: 0 0 40px rgba(57, 255, 20, 0.6);
+    transform: scale(1.02);
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  h1 {
+    font-family: var(--font-matrix);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-matrix-primary);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+
+  .title {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #fff;
+    margin: 0.5rem 0 0 0;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: #aaa;
+    margin: 0.25rem 0 2rem 0;
+    font-weight: 300;
+  }
+
+  .motto {
+    font-family: var(--font-matrix);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--color-matrix-primary);
+    margin: 2rem 0;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-matrix-primary);
+    background: transparent;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+  }
+
+  .contact-button:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .contact-button:active {
+    transform: translateY(0);
+  }
+
+  .copy-icon {
+    transition: transform 0.2s ease;
+  }
+
+  .contact-button:hover .copy-icon {
+    transform: scale(1.1);
+  }
+
+  .terminal-prompt {
+    color: var(--color-matrix-accent);
+    margin-right: 0.5rem;
+  }
+
+  /* Glitch effect */
+  .glitch-text {
+    position: relative;
+    animation: glitch-skew 3s infinite;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-matrix-accent);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px var(--color-matrix-accent);
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    10% { clip: rect(112px, 9999px, 76px, 0); }
+    20% { clip: rect(85px, 9999px, 140px, 0); }
+    30% { clip: rect(120px, 9999px, 34px, 0); }
+    40% { clip: rect(26px, 9999px, 150px, 0); }
+    50% { clip: rect(90px, 9999px, 60px, 0); }
+    60% { clip: rect(65px, 9999px, 100px, 0); }
+    70% { clip: rect(41px, 9999px, 20px, 0); }
+    80% { clip: rect(2px, 9999px, 80px, 0); }
+    90% { clip: rect(50px, 9999px, 120px, 0); }
+    100% { clip: rect(70px, 9999px, 10px, 0); }
+  }
+
+  @keyframes glitch-anim2 {
+    0% { clip: rect(65px, 9999px, 119px, 0); }
+    10% { clip: rect(52px, 9999px, 74px, 0); }
+    20% { clip: rect(79px, 9999px, 85px, 0); }
+    30% { clip: rect(15px, 9999px, 42px, 0); }
+    40% { clip: rect(111px, 9999px, 63px, 0); }
+    50% { clip: rect(82px, 9999px, 105px, 0); }
+    60% { clip: rect(45px, 9999px, 26px, 0); }
+    70% { clip: rect(99px, 9999px, 136px, 0); }
+    80% { clip: rect(33px, 9999px, 50px, 0); }
+    90% { clip: rect(17px, 9999px, 95px, 0); }
+    100% { clip: rect(71px, 9999px, 8px, 0); }
+  }
+
+  @keyframes glitch-skew {
+    0% { transform: skew(0deg); }
+    10% { transform: skew(0deg); }
+    11% { transform: skew(2deg); }
+    12% { transform: skew(0deg); }
+    20% { transform: skew(0deg); }
+    21% { transform: skew(-1deg); }
+    22% { transform: skew(0deg); }
+    100% { transform: skew(0deg); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .profile-image-container {
+      width: 250px;
+      height: 250px;
+    }
+  }
+</style>
+
+<script>
+  const copyBtn = document.getElementById('copyEmailBtn');
+  const emailText = document.getElementById('emailText');
+  
+  if (copyBtn && emailText) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('jpom1310@gmail.com');
+        emailText.textContent = 'Copied!';
+        copyBtn.style.borderColor = 'var(--color-matrix-accent)';
+        copyBtn.style.color = 'var(--color-matrix-accent)';
+        
+        setTimeout(() => {
+          emailText.textContent = 'Copy Email';
+          copyBtn.style.borderColor = 'var(--color-matrix-primary)';
+          copyBtn.style.color = 'var(--color-matrix-primary)';
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        emailText.textContent = 'Failed';
+        setTimeout(() => {
+          emailText.textContent = 'Copy Email';
+        }, 2000);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,83 @@
+---
+---
+
+<section class="certifications" id="certifications">
+  <div class="container">
+    <h2 class="section-title glitch-text" data-text="// Certifications">// Certifications</h2>
+    
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🔒</div>
+        <h3>Cisco Cybersecurity</h3>
+        <p>Certificación en ciberseguridad</p>
+      </div>
+      
+      <div class="cert-card">
+        <div class="cert-icon">🌐</div>
+        <h3>Cisco Networking</h3>
+        <p>Certificación en redes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .certifications {
+    min-height: 50vh;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-matrix);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-matrix-primary);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .cert-card {
+    background: rgba(57, 255, 20, 0.05);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .cert-card:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .cert-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: grayscale(1) brightness(1.5);
+  }
+
+  .cert-card h3 {
+    font-family: var(--font-matrix);
+    color: var(--color-matrix-primary);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  .cert-card p {
+    color: #ddd;
+    margin: 0;
+  }
+</style>

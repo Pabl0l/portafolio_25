@@ -1,0 +1,178 @@
+---
+import projectImg1 from '../../assets/images/Whisk_3ad6291c337cfb895d54ecffba59201beg.png';
+import projectImg2 from '../../assets/images/Whisk_05960aa05f5115b81964b041af295c77eg.png';
+---
+
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section-title glitch-text" data-text="// Projects">// Projects</h2>
+    
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src={projectImg1.src} alt="UniArauca" />
+        </div>
+        <div class="project-content">
+          <h3>UniArauca</h3>
+          <p>MPA para representación web oficial de la universidad de Arauca (info e inscripciones).</p>
+          <div class="tech-stack">
+            <span>React</span>
+            <span>CSS</span>
+            <span>TypeScript</span>
+          </div>
+          <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src={projectImg2.src} alt="dap nfc" />
+        </div>
+        <div class="project-content">
+          <h3>dap nfc</h3>
+          <p>MPA catálogo oficial de dapNFC con información del producto y contacto con el vendedor.</p>
+          <div class="tech-stack">
+            <span>Next.js</span>
+            <span>Tailwind</span>
+            <span>TypeScript</span>
+          </div>
+          <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content full-width">
+          <h3>Merge Helper</h3>
+          <p>Extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>VS Code API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content full-width">
+          <h3>Python Scripts</h3>
+          <p>Recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-matrix);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-matrix-primary);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: rgba(57, 255, 20, 0.05);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    background: rgba(57, 255, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .full-width {
+    padding: 2rem;
+  }
+
+  .project-card h3 {
+    font-family: var(--font-matrix);
+    color: var(--color-matrix-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  .project-card p {
+    color: #ddd;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack span {
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid var(--color-matrix-accent);
+    color: var(--color-matrix-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  .project-link {
+    display: inline-block;
+    color: var(--color-matrix-primary);
+    text-decoration: none;
+    font-family: var(--font-matrix);
+    transition: all 0.2s ease;
+  }
+
+  .project-link:hover {
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    transform: translateX(4px);
+  }
+</style>
