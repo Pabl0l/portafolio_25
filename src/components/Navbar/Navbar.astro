@@ -1,0 +1,61 @@
+---
+---
+<nav id="main-nav">
+  <a href="#top">Home</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certifications</a>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-matrix-secondary);
+    border-bottom: 2px solid var(--color-matrix-primary);
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  a {
+    color: var(--color-matrix-primary);
+    text-decoration: none;
+    font-family: var(--font-terminal);
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--color-matrix-primary), 0 0 20px var(--color-matrix-primary);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('main-nav');
+    if (nav) {
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        if (lastScrollY < window.scrollY && window.scrollY > 100) { // Added a threshold
+          // Scrolling down
+          nav.style.top = '-100px';
+        } else {
+          // Scrolling up
+          nav.style.top = '0';
+        }
+        lastScrollY = window.scrollY;
+      });
+    }
+  });
+</script>
