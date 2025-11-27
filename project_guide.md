@@ -4,7 +4,7 @@ Este documento sirve como referencia central para el contenido, diseño y requer
 
 ## 1. Información General
 - **Nombre:** Pablo Olivera
-- **Título:** Técnico en Mantenimiento de Sistemas Informáticos (Estudiante en prácticas)
+- **Título:** Técnico en Mantenimiento de Sistemas Informáticos
 - **Contacto:** jpom1310@gmail.com
 - **Frase Profesional:** "i hate problems so i will fix them one by one"
 

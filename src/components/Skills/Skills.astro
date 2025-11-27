@@ -19,61 +19,33 @@
 
     <div class="skills-grid">
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Web Development</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">HTML</span>
-        </div>
+        <h3>Web Development</h3>
+        <p class="skill-tags">> React > JavaScript > CSS > HTML</p>
       </div>
 
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Programming</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Python</span>
-        </div>
+        <h3>Programming</h3>
+        <p class="skill-tags">> Java > Python</p>
       </div>
 
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Networking</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Cisco (L2/L3)</span>
-          <span class="skill-tag">IPv4/IPv6</span>
-          <span class="skill-tag">VLAN</span>
-          <span class="skill-tag">DHCP</span>
-          <span class="skill-tag">NAT</span>
-        </div>
+        <h3>Networking</h3>
+        <p class="skill-tags">> Cisco (L2/L3) > IPv4/IPv6 > VLAN > DHCP > NAT</p>
       </div>
 
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Systems & Tools</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">Windows</span>
-          <span class="skill-tag">VirtualBox</span>
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Packet Tracer</span>
-        </div>
+        <h3>Systems & Tools</h3>
+        <p class="skill-tags">> Linux > Windows > VirtualBox > Figma > Packet Tracer</p>
       </div>
 
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Security</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Firewalls</span>
-          <span class="skill-tag">Vulnerability Analysis</span>
-          <span class="skill-tag">Best Practices</span>
-        </div>
+        <h3>Security</h3>
+        <p class="skill-tags">> Firewalls > Vulnerability Analysis > Best Practices</p>
       </div>
 
       <div class="skill-category">
-        <h3><span class="prompt">$</span> Hardware</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Assembly</span>
-          <span class="skill-tag">Repair</span>
-          <span class="skill-tag">Diagnostics</span>
-        </div>
+        <h3>Hardware</h3>
+        <p class="skill-tags">> Assembly > Repair > Diagnostics</p>
       </div>
     </div>
   </div>
@@ -128,70 +100,49 @@
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 
   .skill-category {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
-    padding: 0;
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+    padding: 1.5rem;
     transition: all 0.3s ease;
   }
 
   .skill-category:hover {
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
-    transform: translateY(-2px);
+    background: rgba(0, 55, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
   }
 
   .skill-category h3 {
-    font-family: 'VT323', monospace;
-    color: #fff;
-    margin: 0;
-    padding: 0.75rem 1rem;
-    font-size: 1.3rem;
-    font-weight: 400;
-    background: rgba(57, 255, 20, 0.1);
-    border-bottom: 1px solid var(--color-matrix-primary);
-    border-radius: 8px 8px 0 0;
-  }
-
-  .skill-tags {
-    padding: 1rem;
-  }
-
-  .prompt {
-    color: var(--color-matrix-accent);
-    margin-right: 0.5rem;
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .skill-tag {
-    background: rgba(57, 255, 20, 0.1);
-    border: 1px solid var(--color-matrix-primary);
+    font-family: var(--font-matrix);
     color: var(--color-matrix-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
   }
 
-  .skill-tag:hover {
-    background: rgba(57, 255, 20, 0.2);
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
-    transform: scale(1.05);
+  .skill-tags {
+    font-family: var(--font-terminal);
+    color: #ddd;
+    line-height: 1.6;
+    margin: 0;
   }
 
   @media (max-width: 768px) {
     .skills {
       padding: 3rem 1rem;
     }
+  }
+
+  .section-title {
+    font-family: var(--font-matrix);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-matrix-primary);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
   }
 </style>

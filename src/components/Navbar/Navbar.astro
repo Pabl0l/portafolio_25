@@ -12,50 +12,34 @@
 <style>
   nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-matrix-secondary);
-    border-bottom: 2px solid var(--color-matrix-primary);
-    transition: top 0.3s ease-in-out;
+    flex-direction: row;
+    gap: 1rem;
     z-index: 1000;
+    backdrop-filter: blur(5px);
   }
 
   a {
     color: var(--color-matrix-primary);
     text-decoration: none;
     font-family: var(--font-terminal);
-    margin: 0 1rem;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
   }
 
   a:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--color-matrix-primary), 0 0 20px var(--color-matrix-primary);
+    background: var(--color-matrix-primary);
+    color: var(--color-matrix-bg);
+    box-shadow: 0 0 15px var(--color-matrix-primary);
+    transform: translateY(-2px);
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.getElementById('main-nav');
-    if (nav) {
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener('scroll', () => {
-        if (lastScrollY < window.scrollY && window.scrollY > 100) { // Added a threshold
-          // Scrolling down
-          nav.style.top = '-100px';
-        } else {
-          // Scrolling up
-          nav.style.top = '0';
-        }
-        lastScrollY = window.scrollY;
-      });
-    }
-  });
-</script>

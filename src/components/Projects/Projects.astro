@@ -1,6 +1,7 @@
 ---
-import projectImg1 from '../../assets/images/tecnologia.jpeg';
-import projectImg2 from '../../assets/images/pantallas.jpeg';
+import projectImg1 from '../../assets/images/UNAR.png';
+import projectImg2 from '../../assets/images/DAPNFC.png';
+import projectImg3 from '../../assets/images/Merge_Helper.png';
 ---
 
 <section class="projects" id="projects">
@@ -45,13 +46,19 @@ import projectImg2 from '../../assets/images/pantallas.jpeg';
       </div>
 
       <div class="project-card">
-        <div class="project-content full-width">
+        <div class="project-image">
+          <img src={projectImg3.src} alt="Merge Helper" />
+        </div>
+        <div class="project-content">
           <h3>Merge Helper</h3>
           <p>Extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente.</p>
           <div class="tech-stack">
             <span>Python</span>
             <span>VS Code API</span>
           </div>
+          <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Project →
+          </a>
         </div>
       </div>
 
@@ -86,7 +93,6 @@ import projectImg2 from '../../assets/images/pantallas.jpeg';
     font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-matrix-primary);
     margin-bottom: 3rem;
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
   }
 
   .projects-grid {
@@ -96,7 +102,7 @@ import projectImg2 from '../../assets/images/pantallas.jpeg';
   }
 
   .project-card {
-    background: rgba(57, 255, 20, 0.05);
+    background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
     overflow: hidden;
