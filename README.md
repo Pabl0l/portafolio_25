@@ -41,6 +41,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👤 Author
 
-**Juan Pablo Olivera Mendoza**
+**Pablo Olivera**
 - *Role*: Technical Student in Systems Maintenance
 - *Motto*: "i hate problems so i will fix them one by one"

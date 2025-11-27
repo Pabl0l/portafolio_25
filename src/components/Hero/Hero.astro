@@ -1,5 +1,5 @@
 ---
-import profileImg from '../../assets/images/Whisk_0a6bbccb60ff5e6bbcc4a05b767eeb27eg.png';
+import profileImg from '../../assets/images/retrato.png';
 ---
 
 <section class="hero">
@@ -10,8 +10,8 @@ import profileImg from '../../assets/images/Whisk_0a6bbccb60ff5e6bbcc4a05b767eeb
     </div>
     
     <div class="hero-text">
-      <h1 class="glitch-text" data-text="Juan Pablo Olivera Mendoza">
-        Juan Pablo Olivera Mendoza
+      <h1 class="glitch-text" data-text="Pablo Olivera">
+        Pablo Olivera
       </h1>
       
       <p class="title">Técnico en Mantenimiento de Sistemas Informáticos</p>
@@ -59,20 +59,22 @@ import profileImg from '../../assets/images/Whisk_0a6bbccb60ff5e6bbcc4a05b767eeb
     width: 300px;
     height: 300px;
     flex-shrink: 0;
+    overflow: visible;
+    border-radius: 8px;
   }
 
   .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid var(--color-matrix-primary);
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    filter: drop-shadow(0 10px 30px rgba(57, 255, 20, 0.4));
     transition: all 0.3s ease;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
 
   .profile-image:hover {
-    box-shadow: 0 0 40px rgba(57, 255, 20, 0.6);
+    filter: drop-shadow(0 15px 40px rgba(57, 255, 20, 0.6));
     transform: scale(1.02);
   }
 

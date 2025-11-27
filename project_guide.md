@@ -3,7 +3,7 @@
 Este documento sirve como referencia central para el contenido, diseño y requerimientos del portafolio.
 
 ## 1. Información General
-- **Nombre:** Juan Pablo Olivera Mendoza
+- **Nombre:** Pablo Olivera
 - **Título:** Técnico en Mantenimiento de Sistemas Informáticos (Estudiante en prácticas)
 - **Contacto:** jpom1310@gmail.com
 - **Frase Profesional:** "i hate problems so i will fix them one by one"

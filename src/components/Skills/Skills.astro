@@ -3,7 +3,7 @@
 
 <section class="skills" id="skills">
   <div class="container">
-    <h2 class="section-title glitch-text" data-text="// Skills & Profile">// Skills & Profile</h2>
+    <h2 class="section-title">// Skills & Profile</h2>
     
     <div class="profile-grid">
       <div class="profile-card">
@@ -92,62 +92,6 @@
     margin: 0 auto;
   }
 
-  .section-title {
-    font-family: var(--font-matrix);
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--color-matrix-primary);
-    margin-bottom: 3rem;
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-    position: relative;
-  }
-
-  .glitch-text {
-    position: relative;
-    animation: glitch-skew 3s infinite;
-  }
-
-  .glitch-text::before,
-  .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-  }
-
-  .glitch-text::before {
-    left: 2px;
-    text-shadow: -2px 0 var(--color-matrix-accent);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-  }
-
-  .glitch-text::after {
-    left: -2px;
-    text-shadow: -2px 0 #00fff9, 2px 2px var(--color-matrix-accent);
-    animation: glitch-anim2 1s infinite linear alternate-reverse;
-  }
-
-  @keyframes glitch-anim {
-    0% { clip: rect(31px, 9999px, 94px, 0); }
-    50% { clip: rect(90px, 9999px, 60px, 0); }
-    100% { clip: rect(70px, 9999px, 10px, 0); }
-  }
-
-  @keyframes glitch-anim2 {
-    0% { clip: rect(65px, 9999px, 119px, 0); }
-    50% { clip: rect(82px, 9999px, 105px, 0); }
-    100% { clip: rect(71px, 9999px, 8px, 0); }
-  }
-
-  @keyframes glitch-skew {
-    0%, 100% { transform: skew(0deg); }
-    11% { transform: skew(2deg); }
-    21% { transform: skew(-1deg); }
-  }
-
   .profile-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -156,7 +100,7 @@
   }
 
   .profile-card {
-    background: rgba(57, 255, 20, 0.05);
+    background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
     padding: 1.5rem;
@@ -164,7 +108,7 @@
   }
 
   .profile-card:hover {
-    background: rgba(57, 255, 20, 0.1);
+    background: rgba(0, 55, 20, 0.1);
     box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
     transform: translateY(-4px);
   }
@@ -188,12 +132,34 @@
     gap: 2rem;
   }
 
+  .skill-category {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .skill-category:hover {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    transform: translateY(-2px);
+  }
+
   .skill-category h3 {
-    font-family: var(--font-body);
+    font-family: 'VT323', monospace;
     color: #fff;
-    margin: 0 0 1rem 0;
-    font-size: 1.1rem;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
+    background: rgba(57, 255, 20, 0.1);
+    border-bottom: 1px solid var(--color-matrix-primary);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .skill-tags {
+    padding: 1rem;
   }
 
   .prompt {
