@@ -24,17 +24,35 @@ import profileImg from '../../assets/images/retrato.png';
         
         <p class="title" data-i18n="hero.title">Técnico en Mantenimiento de Sistemas Informáticos</p>
         
-        <p class="motto glitch-text" data-i18n="hero.motto" data-text="odio los problemas, así que los arreglaré uno por uno">
+        <p class="motto" data-i18n="hero.motto" data-text="odio los problemas, así que los arreglaré uno por uno">
           odio los problemas, así que los arreglaré uno por uno
         </p>
         
-        <button class="contact-button" id="copyEmailBtn">
-          <span id="emailText" data-i18n="hero.copyEmail">Email</span>
-          <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-        </button>
+        <div class="contact-buttons">
+          <button class="contact-button" id="copyEmailBtn">
+            <span class="contact-selector">&gt; </span><span id="emailText" data-i18n="hero.copyEmail">Email</span>
+            <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </button>
+          
+          <a href="https://github.com/Pabl0l" target="_blank" rel="noopener noreferrer" class="contact-button">
+            <span class="contact-selector">&gt; </span><span>GitHub</span>
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/pablo-olivera-451467292/" target="_blank" rel="noopener noreferrer" class="contact-button">
+            <span class="contact-selector">&gt; </span><span>LinkedIn</span>
+            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -155,6 +173,13 @@ import profileImg from '../../assets/images/retrato.png';
     text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
   }
 
+  .contact-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
   .contact-button {
     display: inline-flex;
     align-items: center;
@@ -172,6 +197,19 @@ import profileImg from '../../assets/images/retrato.png';
     font-family: var(--font-body);
   }
 
+  .contact-selector {
+    /* Fixed width to take up space, but doesn't affect layout due to absolute positioning */
+    width: 0.5rem; /* This is the width of the '>' plus some space */
+    text-align: right; /* Align '>' to the right within its allocated space */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease; /* Only animate opacity */
+    color: var(--color-matrix-primary);
+  }
+
+  .contact-button:hover .contact-selector,
+  .contact-button:focus-visible .contact-selector {
+    opacity: 1; /* Fully visible on hover/focus */
+  }
   .contact-button:hover {
     background: rgba(57, 255, 20, 0.1);
     box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
@@ -344,3 +382,6 @@ import profileImg from '../../assets/images/retrato.png';
   document.addEventListener('DOMContentLoaded', updateContent);
   window.addEventListener('languageChanged', updateContent);
 </script>
+
+
+
