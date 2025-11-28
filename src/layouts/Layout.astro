@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import DigitalRain from '../components/DigitalRain.astro';
 import Navbar from '../components/Navbar/Navbar.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 
 interface Props {
 	title: string;
@@ -22,6 +23,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<DigitalRain />
+		<LanguageSwitcher />
 		<Navbar />
 		<slot />
 	</body>
