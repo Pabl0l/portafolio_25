@@ -10,19 +10,19 @@ import profileImg from '../../assets/images/retrato.png';
     </div>
     
     <div class="hero-text">
-      <h1 class="glitch-text" data-text="Pablo Olivera">
+      <h1 class="glitch-text" data-i18n="hero.name" data-text="Pablo Olivera">
         Pablo Olivera
       </h1>
       
-      <p class="title">Técnico en Mantenimiento de Sistemas Informáticos</p>
+      <p class="title" data-i18n="hero.title">Técnico en Mantenimiento de Sistemas Informáticos</p>
       
-      <p class="motto glitch-text" data-text="i hate problems so i will fix them one by one">
-        i hate problems so i will fix them one by one
+      <p class="motto glitch-text" data-i18n="hero.motto" data-text="odio los problemas, así que los arreglaré uno por uno">
+        odio los problemas, así que los arreglaré uno por uno
       </p>
       
       <button class="contact-button" id="copyEmailBtn">
         <span class="terminal-prompt">$</span> 
-        <span id="emailText">Copy Email</span>
+        <span id="emailText" data-i18n="hero.copyEmail">Copiar Email</span>
         <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
           <path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5"/>
@@ -245,7 +245,9 @@ import profileImg from '../../assets/images/retrato.png';
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText('jpom1310@gmail.com');
-        emailText.textContent = 'Copied!';
+        const lang = localStorage.getItem('language') || 'es';
+        const labels = { es: '¡Copiado!', en: 'Copied!', de: 'Kopiert!' };
+        emailText.textContent = labels[lang as keyof typeof labels];
         copyBtn.style.borderColor = 'var(--color-matrix-accent)';
         copyBtn.style.color = 'var(--color-matrix-accent)';
         
@@ -256,7 +258,9 @@ import profileImg from '../../assets/images/retrato.png';
         }, 2000);
       } catch (err) {
         console.error('Failed to copy:', err);
-        emailText.textContent = 'Failed';
+        const lang = localStorage.getItem('language') || 'es';
+        const labels = { es: 'Error', en: 'Failed', de: 'Fehler' };
+        emailText.textContent = labels[lang as keyof typeof labels];
         setTimeout(() => {
           emailText.textContent = 'Copy Email';
         }, 2000);

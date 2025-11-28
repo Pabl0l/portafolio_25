@@ -3,48 +3,48 @@
 
 <section class="skills" id="skills">
   <div class="container">
-    <h2 class="section-title">// Skills & Profile</h2>
+    <h2 class="section-title" data-i18n="skills.title">// Habilidades y Perfil</h2>
     
     <div class="profile-grid">
       <div class="profile-card">
-        <h3>$ whoami</h3>
-        <p>Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.</p>
+        <h3 data-i18n="skills.whoami">$ whoami</h3>
+        <p data-i18n="skills.whoamiText">Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.</p>
       </div>
 
       <div class="profile-card">
-        <h3>$ cat objective.txt</h3>
-        <p>Desarrollar, mantener y dar soporte de software, red de internet o hardware para una empresa o cliente.</p>
+        <h3 data-i18n="skills.objective">$ cat objective.txt</h3>
+        <p data-i18n="skills.objectiveText">Desarrollar, mantener y dar soporte de software, red de internet o hardware para una empresa o cliente.</p>
       </div>
     </div>
 
     <div class="skills-grid">
       <div class="skill-category">
-        <h3>Web Development</h3>
+        <h3 data-i18n="skills.categories.webDev">Desarrollo Web</h3>
         <p class="skill-tags">> React > JavaScript > CSS > HTML</p>
       </div>
 
       <div class="skill-category">
-        <h3>Programming</h3>
+        <h3 data-i18n="skills.categories.programming">Programación</h3>
         <p class="skill-tags">> Java > Python</p>
       </div>
 
       <div class="skill-category">
-        <h3>Networking</h3>
+        <h3 data-i18n="skills.categories.networking">Redes</h3>
         <p class="skill-tags">> Cisco (L2/L3) > IPv4/IPv6 > VLAN > DHCP > NAT</p>
       </div>
 
       <div class="skill-category">
-        <h3>Systems & Tools</h3>
+        <h3 data-i18n="skills.categories.systems">Sistemas y Herramientas</h3>
         <p class="skill-tags">> Linux > Windows > VirtualBox > Figma > Packet Tracer</p>
       </div>
 
       <div class="skill-category">
-        <h3>Security</h3>
+        <h3 data-i18n="skills.categories.security">Seguridad</h3>
         <p class="skill-tags">> Firewalls > Vulnerability Analysis > Best Practices</p>
       </div>
 
       <div class="skill-category">
-        <h3>Hardware</h3>
+        <h3 data-i18n="skills.categories.hardware">Hardware</h3>
         <p class="skill-tags">> Assembly > Repair > Diagnostics</p>
       </div>
     </div>
@@ -143,6 +143,31 @@
     font-size: clamp(2rem, 4vw, 3rem);
     color: var(--color-matrix-primary);
     margin-bottom: 3rem;
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
   }
 </style>
+
+<script>
+  import { languages, defaultLang, type Language } from '../../i18n';
+
+  function updateContent() {
+    const lang = (localStorage.getItem('language') as Language) || defaultLang;
+    const t = languages[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key) {
+        const keys = key.split('.');
+        let value: any = t;
+        for (const k of keys) {
+          value = value?.[k];
+        }
+        if (value && typeof value === 'string') {
+          el.textContent = value;
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', updateContent);
+  window.addEventListener('languageChanged', updateContent);
+</script>

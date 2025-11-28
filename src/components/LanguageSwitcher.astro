@@ -1,0 +1,139 @@
+---
+---
+
+<div class="language-switcher">
+  <button class="lang-btn active" data-lang="es" title="Español">
+    <span class="flag">🇨🇴</span>
+  </button>
+  <button class="lang-btn" data-lang="en" title="English">
+    <span class="flag">🇬🇧</span>
+  </button>
+  <button class="lang-btn" data-lang="de" title="Deutsch">
+    <span class="flag">🇩🇪</span>
+  </button>
+</div>
+
+<style>
+  .language-switcher {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-matrix-primary);
+    backdrop-filter: blur(5px);
+    width: 3.5rem;
+    height: 3.5rem;
+    overflow: visible;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .language-switcher:hover {
+    width: 11rem;
+    justify-content: flex-start;
+  }
+
+  .lang-btn {
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  /* Hide non-active buttons by default */
+  .lang-btn:not(.active) {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Position inactive buttons when expanded */
+  .language-switcher:hover .lang-btn:not(.active) {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+
+  .lang-btn:hover {
+    border-color: var(--color-matrix-primary);
+    transform: scale(1.1);
+  }
+
+  .lang-btn.active {
+    border-color: var(--color-matrix-primary);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    opacity: 1;
+  }
+
+  .flag {
+    display: block;
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
+  }
+
+  .lang-btn:hover .flag,
+  .lang-btn.active .flag {
+    filter: grayscale(0);
+  }
+</style>
+
+<script>
+  import { languages, defaultLang, type Language } from '../i18n';
+
+  // Get current language from localStorage or use default
+  let currentLang: Language = (localStorage.getItem('language') as Language) || defaultLang;
+
+  // Set active button on load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateActiveButton();
+    updatePageContent();
+  });
+
+  // Add click listeners to language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang') as Language;
+      if (lang && lang in languages) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        updateActiveButton();
+        updatePageContent();
+      }
+    });
+  });
+
+  function updateActiveButton() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-lang') === currentLang) {
+        btn.classList.add('active');
+      }
+    });
+  }
+
+  function updatePageContent() {
+    const t = languages[currentLang];
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = currentLang;
+
+    // Dispatch custom event for components to update
+    window.dispatchEvent(new CustomEvent('languageChanged', { 
+      detail: { lang: currentLang, translations: t } 
+    }));
+  }
+</script>
