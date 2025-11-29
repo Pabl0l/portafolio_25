@@ -1,10 +1,3 @@
----
----
-
-<section class="skills" id="skills">
-  <div class="container">
-    <h2 class="section-title" data-i18n="skills.title">//Perfil  y Habilidade</h2>
-    
     <div class="profile-grid">
       <div class="profile-card draggable">
         <div class="window-bar">
@@ -87,13 +80,12 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative; /* Make this the positioning context */
   }
-
+  
   #reset-windows {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
     background: var(--color-matrix-accent);
     color: white;
     border: none;
@@ -103,27 +95,62 @@
     font-family: var(--font-terminal);
   }
 
-  .profile-grid, .skills-grid {
+  .profile-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
   }
 
-  .profile-card, .skill-category {
+  .profile-card {
     background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
     padding: 0;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    resize: both;
-    overflow: auto;
-    min-width: 200px;
-    min-height: 150px;
-    /* position is set by JS */
   }
 
+  .profile-card:hover {
+    background: rgba(0, 55, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .profile-card p {
+    color: #ddd;
+    line-height: 1.6;
+    margin: 1.5rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--color-matrix-primary);
+    border-radius: 8px;
+    padding: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .skill-category:hover {
+    background: rgba(0, 55, 20, 0.1);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .skill-tags {
+    font-family: var(--font-terminal);
+    color: #ddd;
+    line-height: 1.6;
+    margin: 1.5rem;
+  }
+  
   .window-bar {
     background: var(--color-matrix-primary);
     color: var(--color-matrix-bg);
@@ -154,16 +181,6 @@
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-  }
-
-  .profile-card p, .skill-category p {
-    color: #ddd;
-    line-height: 1.6;
-    margin: 1.5rem;
-  }
-  
-  .skill-tags {
-    font-family: var(--font-terminal);
   }
 
   @media (max-width: 768px) {
@@ -206,94 +223,47 @@
   window.addEventListener('languageChanged', updateContent);
 
   document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      const draggableElements = document.querySelectorAll('.draggable');
-      const resetBtn = document.getElementById('reset-windows');
+    interact('.draggable')
+      .draggable({
+        allowFrom: '.window-bar',
+        inertia: true,
+        modifiers: [
+          interact.modifiers.restrictRect({
+            restriction: 'parent',
+            endOnly: true
+          })
+        ],
+        autoScroll: true,
+        listeners: {
+          move (event) {
+            const target = event.target
+            const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+            const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
 
-      // Store initial state
-      draggableElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        el.dataset.initialLeft = el.offsetLeft + 'px';
-        el.dataset.initialTop = el.offsetTop + 'px';
-        el.dataset.initialWidth = el.offsetWidth + 'px';
-        el.dataset.initialHeight = el.offsetHeight + 'px';
-      });
+            target.style.transform = `translate(${x}px, ${y}px)`
 
-      // Apply initial state as absolute
-      draggableElements.forEach(el => {
-        el.style.left = el.dataset.initialLeft;
-        el.style.top = el.dataset.initialTop;
-        el.style.width = el.dataset.initialWidth;
-        el.style.height = el.dataset.initialHeight;
-        el.style.position = 'absolute';
-      });
-      
-      interact('.draggable')
-        .draggable({
-          inertia: true,
-          modifiers: [
-            interact.modifiers.restrictRect({
-              restriction: 'parent',
-              endOnly: true
-            })
-          ],
-          autoScroll: true,
-          listeners: {
-            move: dragMoveListener,
-          }
-        })
-        .resizable({
-          edges: { left: true, right: true, bottom: true, top: true },
-          listeners: {
-            move (event) {
-              let { x, y } = event.target.dataset
-
-              x = (parseFloat(x) || 0) + event.deltaRect.left
-              y = (parseFloat(y) || 0) + event.deltaRect.top
-
-              Object.assign(event.target.style, {
-                width: event.rect.width + 'px',
-                height: event.rect.height + 'px',
-                transform: `translate(${x}px, ${y}px)`
-              })
-
-              Object.assign(event.target.dataset, { x, y })
-            }
+            target.setAttribute('data-x', x)
+            target.setAttribute('data-y', y)
           },
-          inertia: true
-        })
+        }
+      })
 
-      function dragMoveListener (event) {
-        const target = event.target
-        const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-        const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-        target.style.transform = `translate(${x}px, ${y}px)`
-
-        target.setAttribute('data-x', x)
-        target.setAttribute('data-y', y)
-      }
-
-      // Close buttons
-      document.querySelectorAll('.window-close').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.target.closest('.draggable').style.display = 'none';
-        });
+    // Close buttons
+    document.querySelectorAll('.window-close').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.target.closest('.draggable').style.display = 'none';
       });
+    });
 
-      // Reset button
-      resetBtn.addEventListener('click', () => {
-        draggableElements.forEach(el => {
-          el.style.display = 'block';
-          el.style.left = el.dataset.initialLeft;
-          el.style.top = el.dataset.initialTop;
-          el.style.width = el.dataset.initialWidth;
-          el.style.height = el.dataset.initialHeight;
-          el.style.transform = 'translate(0px, 0px)';
-          el.setAttribute('data-x', 0);
-          el.setAttribute('data-y', 0);
-        });
+    // Reset button
+    const resetBtn = document.getElementById('reset-windows');
+    resetBtn.addEventListener('click', () => {
+      document.querySelectorAll('.draggable').forEach(el => {
+        el.style.display = 'grid'; // or 'block'
+        el.style.transform = 'translate(0px, 0px)';
+        el.setAttribute('data-x', 0);
+        el.setAttribute('data-y', 0);
       });
-    }, 100); // 100ms delay to allow rendering
+    });
   });
 </script>
