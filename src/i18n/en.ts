@@ -70,14 +70,38 @@ export const en = {
         title: "// Certifications",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Switching, Routing, and Wireless Essentials",
-            threats: "Cyber Threat Management",
-            defense: "Network Defense",
-            endpoints: "Endpoint Security",
-            devices: "Network Devices and Initial Configuration",
-            basics: "Networking Basics",
-            intro: "Introduction to Cybersecurity",
-            awareness: "Digital Awareness"
+            ccna: {
+                name: "CCNA: Switching, Routing, and Wireless Essentials",
+                date: "Aug 28, 2025"
+            },
+            threats: {
+                name: "Cyber Threat Management",
+                date: "May 28, 2025"
+            },
+            defense: {
+                name: "Network Defense",
+                date: "May 26, 2025"
+            },
+            endpoints: {
+                name: "Endpoint Security",
+                date: "May 23, 2025"
+            },
+            devices: {
+                name: "Network Devices and Initial Configuration",
+                date: "Apr 07, 2025"
+            },
+            basics: {
+                name: "Networking Basics",
+                date: "Mar 21, 2025"
+            },
+            intro: {
+                name: "Introduction to Cybersecurity",
+                date: "Mar 16, 2025"
+            },
+            awareness: {
+                name: "Digital Awareness",
+                date: "Mar 10, 2025"
+            }
         }
     }
 };

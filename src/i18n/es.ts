@@ -70,14 +70,38 @@ export const es = {
         title: "// Certificaciones",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas",
-            threats: "Gestión de amenazas cibernéticas",
-            defense: "Defensa de la red",
-            endpoints: "Seguridad de Terminales",
-            devices: "Dispositivos de Red y Configuración Inicial",
-            basics: "Conceptos básicos de redes",
-            intro: "Introducción a la Ciberseguridad",
-            awareness: "Conciencia digital"
+            ccna: {
+                name: "CCNA: Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas",
+                date: "28 ago 2025"
+            },
+            threats: {
+                name: "Gestión de amenazas cibernéticas",
+                date: "28 may 2025"
+            },
+            defense: {
+                name: "Defensa de la red",
+                date: "26 may 2025"
+            },
+            endpoints: {
+                name: "Seguridad de Terminales",
+                date: "23 may 2025"
+            },
+            devices: {
+                name: "Dispositivos de Red y Configuración Inicial",
+                date: "07 abr 2025"
+            },
+            basics: {
+                name: "Conceptos básicos de redes",
+                date: "21 mar 2025"
+            },
+            intro: {
+                name: "Introducción a la Ciberseguridad",
+                date: "16 mar 2025"
+            },
+            awareness: {
+                name: "Conciencia digital",
+                date: "10 mar 2025"
+            }
         }
     }
 };

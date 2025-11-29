@@ -70,14 +70,38 @@ export const de = {
         title: "// Zertifikate",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Grundlagen von Switching, Routing und Wireless",
-            threats: "Verwaltung von Cyber-Bedrohungen",
-            defense: "Netzwerkverteidigung",
-            endpoints: "Endpunktsicherheit",
-            devices: "Netzwerkgeräte und Erstkonfiguration",
-            basics: "Netzwerkgrundlagen",
-            intro: "Einführung in die Cybersicherheit",
-            awareness: "Digitales Bewusstsein"
+            ccna: {
+                name: "CCNA: Grundlagen von Switching, Routing und Wireless",
+                date: "28. Aug. 2025"
+            },
+            threats: {
+                name: "Verwaltung von Cyber-Bedrohungen",
+                date: "28. Mai 2025"
+            },
+            defense: {
+                name: "Netzwerkverteidigung",
+                date: "26. Mai 2025"
+            },
+            endpoints: {
+                name: "Endpunktsicherheit",
+                date: "23. Mai 2025"
+            },
+            devices: {
+                name: "Netzwerkgeräte und Erstkonfiguration",
+                date: "07. Apr. 2025"
+            },
+            basics: {
+                name: "Netzwerkgrundlagen",
+                date: "21. Mrz. 2025"
+            },
+            intro: {
+                name: "Einführung in die Cybersicherheit",
+                date: "16. Mrz. 2025"
+            },
+            awareness: {
+                name: "Digitales Bewusstsein",
+                date: "10. Mrz. 2025"
+            }
         }
     }
 };
