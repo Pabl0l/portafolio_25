@@ -104,7 +104,10 @@
   }
 
   .profile-grid, .skills-grid {
-    min-height: 500px; /* Give some space for the absolute positioned elements */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
 
   .profile-card, .skill-category {
@@ -203,91 +206,94 @@
   window.addEventListener('languageChanged', updateContent);
 
   document.addEventListener('DOMContentLoaded', () => {
-    const draggableElements = document.querySelectorAll('.draggable');
-    const resetBtn = document.getElementById('reset-windows');
+    setTimeout(() => {
+      const draggableElements = document.querySelectorAll('.draggable');
+      const resetBtn = document.getElementById('reset-windows');
 
-    // Store initial state
-    draggableElements.forEach(el => {
-      el.dataset.initialLeft = el.offsetLeft + 'px';
-      el.dataset.initialTop = el.offsetTop + 'px';
-      el.dataset.initialWidth = el.offsetWidth + 'px';
-      el.dataset.initialHeight = el.offsetHeight + 'px';
-    });
-
-    // Apply initial state as absolute
-    draggableElements.forEach(el => {
-      el.style.left = el.dataset.initialLeft;
-      el.style.top = el.dataset.initialTop;
-      el.style.width = el.dataset.initialWidth;
-      el.style.height = el.dataset.initialHeight;
-      el.style.position = 'absolute';
-    });
-    
-    interact('.draggable')
-      .draggable({
-        inertia: true,
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: 'parent',
-            endOnly: true
-          })
-        ],
-        autoScroll: true,
-        listeners: {
-          move: dragMoveListener,
-        }
-      })
-      .resizable({
-        edges: { left: true, right: true, bottom: true, top: true },
-        listeners: {
-          move (event) {
-            let { x, y } = event.target.dataset
-
-            x = (parseFloat(x) || 0) + event.deltaRect.left
-            y = (parseFloat(y) || 0) + event.deltaRect.top
-
-            Object.assign(event.target.style, {
-              width: event.rect.width + 'px',
-              height: event.rect.height + 'px',
-              transform: `translate(${x}px, ${y}px)`
-            })
-
-            Object.assign(event.target.dataset, { x, y })
-          }
-        },
-        inertia: true
-      })
-
-    function dragMoveListener (event) {
-      const target = event.target
-      const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-      const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-      target.style.transform = `translate(${x}px, ${y}px)`
-
-      target.setAttribute('data-x', x)
-      target.setAttribute('data-y', y)
-    }
-
-    // Close buttons
-    document.querySelectorAll('.window-close').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.target.closest('.draggable').style.display = 'none';
-      });
-    });
-
-    // Reset button
-    resetBtn.addEventListener('click', () => {
+      // Store initial state
       draggableElements.forEach(el => {
-        el.style.display = 'block';
+        const rect = el.getBoundingClientRect();
+        el.dataset.initialLeft = el.offsetLeft + 'px';
+        el.dataset.initialTop = el.offsetTop + 'px';
+        el.dataset.initialWidth = el.offsetWidth + 'px';
+        el.dataset.initialHeight = el.offsetHeight + 'px';
+      });
+
+      // Apply initial state as absolute
+      draggableElements.forEach(el => {
         el.style.left = el.dataset.initialLeft;
         el.style.top = el.dataset.initialTop;
         el.style.width = el.dataset.initialWidth;
         el.style.height = el.dataset.initialHeight;
-        el.style.transform = 'translate(0px, 0px)';
-        el.setAttribute('data-x', 0);
-        el.setAttribute('data-y', 0);
+        el.style.position = 'absolute';
       });
-    });
+      
+      interact('.draggable')
+        .draggable({
+          inertia: true,
+          modifiers: [
+            interact.modifiers.restrictRect({
+              restriction: 'parent',
+              endOnly: true
+            })
+          ],
+          autoScroll: true,
+          listeners: {
+            move: dragMoveListener,
+          }
+        })
+        .resizable({
+          edges: { left: true, right: true, bottom: true, top: true },
+          listeners: {
+            move (event) {
+              let { x, y } = event.target.dataset
+
+              x = (parseFloat(x) || 0) + event.deltaRect.left
+              y = (parseFloat(y) || 0) + event.deltaRect.top
+
+              Object.assign(event.target.style, {
+                width: event.rect.width + 'px',
+                height: event.rect.height + 'px',
+                transform: `translate(${x}px, ${y}px)`
+              })
+
+              Object.assign(event.target.dataset, { x, y })
+            }
+          },
+          inertia: true
+        })
+
+      function dragMoveListener (event) {
+        const target = event.target
+        const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+        target.style.transform = `translate(${x}px, ${y}px)`
+
+        target.setAttribute('data-x', x)
+        target.setAttribute('data-y', y)
+      }
+
+      // Close buttons
+      document.querySelectorAll('.window-close').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.target.closest('.draggable').style.display = 'none';
+        });
+      });
+
+      // Reset button
+      resetBtn.addEventListener('click', () => {
+        draggableElements.forEach(el => {
+          el.style.display = 'block';
+          el.style.left = el.dataset.initialLeft;
+          el.style.top = el.dataset.initialTop;
+          el.style.width = el.dataset.initialWidth;
+          el.style.height = el.dataset.initialHeight;
+          el.style.transform = 'translate(0px, 0px)';
+          el.setAttribute('data-x', 0);
+          el.setAttribute('data-y', 0);
+        });
+      });
+    }, 100); // 100ms delay to allow rendering
   });
 </script>
