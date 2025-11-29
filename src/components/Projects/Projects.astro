@@ -9,7 +9,7 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     <h2 class="section-title glitch-text" data-i18n="projects.title" data-text="// Projects">// Projects</h2>
     
     <div class="projects-grid">
-      <div class="project-card">
+      <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
           <img src={projectImg1.src} alt="UniArauca" />
         </div>
@@ -21,13 +21,10 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
             <span>CSS</span>
             <span>TypeScript</span>
           </div>
-          <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
-            View Project →
-          </a>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
+      <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
           <img src={projectImg2.src} alt="dap nfc" />
         </div>
@@ -39,13 +36,10 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
             <span>Tailwind</span>
             <span>TypeScript</span>
           </div>
-          <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
-            View Project →
-          </a>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
+      <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
           <img src={projectImg3.src} alt="Merge Helper" />
         </div>
@@ -56,11 +50,8 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
             <span>Python</span>
             <span>VS Code API</span>
           </div>
-          <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
-            View Project →
-          </a>
         </div>
-      </div>
+      </a>
 
       <div class="project-card">
         <div class="project-content full-width">
@@ -108,6 +99,9 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     overflow: hidden;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
 
   .project-card:hover {
@@ -168,19 +162,6 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     font-size: 0.85rem;
-  }
-
-  .project-link {
-    display: inline-block;
-    color: var(--color-matrix-primary);
-    text-decoration: none;
-    font-family: var(--font-terminal);
-    transition: all 0.2s ease;
-  }
-
-  .project-link:hover {
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-    transform: translateX(4px);
   }
 </style>
 
