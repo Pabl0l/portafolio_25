@@ -14,7 +14,7 @@ export const en = {
         certifications: "Certifications"
     },
     skills: {
-        title: "// Skills & Profile",
+        title: "// Profile & Skills",
         whoami: "$ whoami",
         whoamiText: "Systems technician with skills in creation, repair and maintenance of hardware and software. Practical experience in web development and network equipment configuration (switches/routers) via SSH. Soft skills developed as academic monitor.",
         objective: "$ cat objective.txt",
