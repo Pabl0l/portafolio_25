@@ -32,17 +32,17 @@ export const en = {
         title: "// Projects",
         viewProject: "View Project →",
         uniarauca: {
-            desc: "MPA for official web representation of the University of Arauca (info and registration)."
+            desc: "I developed an MPA for the official web representation of the University of Arauca (info and registration)."
         },
         dapnfc: {
-            desc: "MPA official catalog of dapNFC with product information and seller contact."
+            desc: "I developed an MPA as an official catalog for dapNFC with product information and seller contact."
         },
         mergehelper: {
-            desc: "VS Code extension to detect and merge duplicate code blocks, ensuring you always work with the latest version."
+            desc: "I developed a VS Code extension to detect and merge duplicate code blocks, ensuring you always work with the latest version."
         },
         scripts: {
             title: "Python Scripts",
-            desc: "Collection of Python scripts to solve various automation and data processing problems."
+            desc: "I developed a collection of Python scripts to solve various automation and data processing problems."
         }
     },
     experience: {
