@@ -11,7 +11,16 @@ export const es = {
         projects: "Proyectos",
         experience: "Experiencia",
         education: "Educación",
-        certifications: "Certificados"
+        certifications: "Certificados",
+        services: "Servicios"
+    },
+    services: {
+        title: "// Servicios",
+        items: {
+            bugHunter: "Cazador de Errores, Bugs y Fallos de Sistema",
+            mercenary: "Mercenario Especializado en Defensa Digital y Mitigación de Riesgos",
+            exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos"
+        }
     },
     skills: {
         title: "// Perfil y habilidades",
