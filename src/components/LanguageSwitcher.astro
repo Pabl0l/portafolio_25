@@ -26,21 +26,22 @@
     border-radius: 8px;
     border: 1px solid var(--color-matrix-primary);
     backdrop-filter: blur(5px);
-    width: 3.5rem; /* Start with a fixed width */
+    width: 3.5rem;
     height: 3.5rem;
-    overflow: hidden; /* Important to hide the non-active buttons */
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Animate width */
-    justify-content: flex-start; /* Always start from the left */
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
     align-items: center;
   }
 
   .language-switcher:hover {
-    width: 9.5rem; /* Fixed width on hover */
+    width: 9.5rem;
+    justify-content: flex-start;
   }
 
   .lang-btn {
     background: transparent;
-    border: none; /* Removed border */
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -52,21 +53,20 @@
 
   /* Hide non-active buttons by default */
   .lang-btn:not(.active) {
+    position: absolute;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.8);
-    width: 0; /* Collapse the width */
-    padding: 0; /* Remove padding when hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease, padding 0.3s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
   /* Position inactive buttons when expanded */
   .language-switcher:hover .lang-btn:not(.active) {
+    position: relative;
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
-    width: auto; /* Restore width */
-    padding: 0.25rem 0.5rem; /* Restore padding */
+    transition-delay: 0.2s;
   }
 
   .lang-btn:hover {
