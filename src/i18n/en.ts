@@ -49,6 +49,7 @@ export const en = {
         title: "// Experience",
         mired: {
             position: "Computer Systems Maintenance and Repair Intern",
+            date: "10/28/2025 - Present",
             responsibilities: [
                 "Installation and physical repair of equipment",
                 "PC formatting, OS installation, backup creation",
@@ -63,7 +64,7 @@ export const en = {
         degree: "Computer Systems Maintenance Technician",
         institution: "Institución Universitaria de Barranquilla",
         status: "Internship",
-        period: "2025-10 : 2026-04"
+        period: "2024-04 : 2026-04"
     },
     certifications: {
         title: "// Certifications",

@@ -49,6 +49,7 @@ export const de = {
         title: "// Erfahrung",
         mired: {
             position: "Praktikant für Computersystemwartung und -reparatur",
+            date: "28.10.2025 - Heute",
             responsibilities: [
                 "Installation und physische Reparatur von Geräten",
                 "PC-Formatierung, Betriebssysteminstallation, Erstellung von Backups",
@@ -63,7 +64,7 @@ export const de = {
         degree: "Techniker für Computersystemwartung",
         institution: "Institución Universitaria de Barranquilla",
         status: "Praktikum",
-        period: "2025-10 : 2026-04"
+        period: "2024-04 : 2026-04"
     },
     certifications: {
         title: "// Zertifikate",

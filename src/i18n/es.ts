@@ -49,6 +49,7 @@ export const es = {
         title: "// Experiencia",
         mired: {
             position: "Practicante Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
+            date: "28/10/2025 - Presente",
             responsibilities: [
                 "Instalación y reparación física de equipos",
                 "Formateo de PC, instalación de sistema operativo, creación de copias de seguridad",
@@ -63,7 +64,7 @@ export const es = {
         degree: "Técnico en Mantenimiento de Sistemas Informáticos",
         institution: "Institución Universitaria de Barranquilla",
         status: "En prácticas",
-        period: "2025-10 : 2026-04"
+        period: "2024-04 : 2026-04"
     },
     certifications: {
         title: "// Certificaciones",

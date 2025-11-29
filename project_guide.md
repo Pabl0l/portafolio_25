@@ -27,7 +27,7 @@ Técnico en sistemas con habilidades en creación, reparación y mantenimiento d
 ## 3. Formación Académica
 - **Título:** Técnico en Mantenimiento de Sistemas Informáticos
 - **Institución:** Institución Universitaria de Barranquilla
-- **Estado:** En prácticas (2025-10 : 2026-04)
+- **Estado:** En prácticas (2024-04 : 2026-04)
 
 ## 4. Certificaciones
 - Certificaciones en Cisco sobre ciberseguridad y redes.
