@@ -43,4 +43,4 @@ All commands are run from the root of the project, from a terminal:
 
 **Pablo Olivera**
 - *Role*: Technical Student in Systems Maintenance
-- *Motto*: "i hate problems so i will fix them one by one"
+- *Motto*: "> i hate problems so i will fix them one by one"

@@ -2,7 +2,7 @@ export const en = {
     hero: {
         name: "Pablo Olivera",
         title: "Computer Systems Maintenance Technician",
-        motto: "i hate problems so i will fix them one by one",
+        motto: "> i hate problems so i will fix them one by one",
         copyEmail: "Email"
     },
     navbar: {
@@ -29,18 +29,39 @@ export const en = {
         }
     },
     projects: {
-        title: "// Projects"
+        title: "// Projects",
+        viewProject: "View Project →",
+        uniarauca: {
+            desc: "MPA for official web representation of the University of Arauca (info and registration)."
+        },
+        dapnfc: {
+            desc: "MPA official catalog of dapNFC with product information and seller contact."
+        },
+        mergehelper: {
+            desc: "VS Code extension to detect and merge duplicate code blocks, ensuring you always work with the latest version."
+        },
+        scripts: {
+            title: "Python Scripts",
+            desc: "Collection of Python scripts to solve various automation and data processing problems."
+        }
     },
     experience: {
         title: "// Experience",
-        position: "Computer Systems Maintenance and Repair Intern",
-        company: "Mired IPS",
-        date: "10/28/2025 - Present"
+        mired: {
+            position: "Computer Systems Maintenance and Repair Intern",
+            responsibilities: [
+                "Installation and physical repair of equipment",
+                "PC formatting, OS installation, backup creation",
+                "LAN network configuration and switch/router maintenance",
+                "Technical support for internal users",
+                "IP printer maintenance"
+            ]
+        }
     },
     education: {
         title: "// Education",
         degree: "Computer Systems Maintenance Technician",
-        institution: "Universidad Institución de Barranquilla",
+        institution: "Institución Universitaria de Barranquilla",
         status: "Internship",
         period: "2025-10 : 2026-04"
     },
@@ -48,11 +69,11 @@ export const en = {
         title: "// Certifications",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Switching and Routing Fundamentals",
+            ccna: "CCNA: Switching, Routing, and Wireless Essentials",
             threats: "Cyber Threat Management",
             defense: "Network Defense",
             endpoints: "Endpoint Security",
-            devices: "Network Devices and Configuration",
+            devices: "Network Devices and Initial Configuration",
             basics: "Networking Basics",
             intro: "Introduction to Cybersecurity",
             awareness: "Digital Awareness"

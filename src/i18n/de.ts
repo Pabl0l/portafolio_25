@@ -2,7 +2,7 @@ export const de = {
     hero: {
         name: "Pablo Olivera",
         title: "Techniker für Computersystemwartung",
-        motto: "ich hasse Probleme, also werde ich sie eins nach dem anderen beheben",
+        motto: "> ich hasse Probleme, also werde ich sie eins nach dem anderen beheben",
         copyEmail: "E-Mail"
     },
     navbar: {
@@ -29,13 +29,34 @@ export const de = {
         }
     },
     projects: {
-        title: "// Projekte"
+        title: "// Projekte",
+        viewProject: "Projekt ansehen →",
+        uniarauca: {
+            desc: "MPA für die offizielle Webpräsenz der Universität von Arauca (Info und Anmeldung)."
+        },
+        dapnfc: {
+            desc: "MPA offizieller Katalog von dapNFC mit Produktinformationen und Verkäuferkontakt."
+        },
+        mergehelper: {
+            desc: "VS Code-Erweiterung zum Erkennen und Zusammenführen doppelter Codeblöcke, um sicherzustellen, dass Sie immer mit der neuesten Version arbeiten."
+        },
+        scripts: {
+            title: "Python Scripts",
+            desc: "Sammlung von Python-Skripten zur Lösung verschiedener Automatisierungs- und Datenverarbeitungsprobleme."
+        }
     },
     experience: {
         title: "// Erfahrung",
-        position: "Praktikant für Computersystemwartung und -reparatur",
-        company: "Mired IPS",
-        date: "28.10.2025 - Gegenwart"
+        mired: {
+            position: "Praktikant für Computersystemwartung und -reparatur",
+            responsibilities: [
+                "Installation und physische Reparatur von Geräten",
+                "PC-Formatierung, Betriebssysteminstallation, Erstellung von Backups",
+                "LAN-Netzwerkkonfiguration und Switch/Router-Wartung",
+                "Technischer Support für interne Benutzer",
+                "Wartung von IP-Druckern"
+            ]
+        }
     },
     education: {
         title: "// Bildung",
@@ -48,11 +69,11 @@ export const de = {
         title: "// Zertifikate",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Grundlagen der Vermittlung und Weiterleitung",
+            ccna: "CCNA: Grundlagen von Switching, Routing und Wireless",
             threats: "Verwaltung von Cyber-Bedrohungen",
             defense: "Netzwerkverteidigung",
             endpoints: "Endpunktsicherheit",
-            devices: "Netzwerkgeräte und Konfiguration",
+            devices: "Netzwerkgeräte und Erstkonfiguration",
             basics: "Netzwerkgrundlagen",
             intro: "Einführung in die Cybersicherheit",
             awareness: "Digitales Bewusstsein"

@@ -2,7 +2,7 @@ export const es = {
     hero: {
         name: "Pablo Olivera",
         title: "Técnico en Mantenimiento de Sistemas Informáticos",
-        motto: "odio los problemas, así que los arreglaré uno por uno",
+        motto: "> odio los problemas, así que los arreglaré uno por uno",
         copyEmail: " Email"
     },
     navbar: {
@@ -29,13 +29,34 @@ export const es = {
         }
     },
     projects: {
-        title: "// Proyectos"
+        title: "// Proyectos",
+        viewProject: "Ver Proyecto →",
+        uniarauca: {
+            desc: "MPA para representación web oficial de la universidad de Arauca (info e inscripciones)."
+        },
+        dapnfc: {
+            desc: "MPA catálogo oficial de dapNFC con información del producto y contacto con el vendedor."
+        },
+        mergehelper: {
+            desc: "Extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente."
+        },
+        scripts: {
+            title: "Python Scripts",
+            desc: "Recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos."
+        }
     },
     experience: {
         title: "// Experiencia",
-        position: "Practicante Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
-        company: "Mired IPS",
-        date: "28/10/2025 - Presente"
+        mired: {
+            position: "Practicante Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
+            responsibilities: [
+                "Instalación y reparación física de equipos",
+                "Formateo de PC, instalación de sistema operativo, creación de copias de seguridad",
+                "Configuración de redes LAN y mantenimiento de switches/routers",
+                "Soporte técnico a usuarios internos",
+                "Mantenimiento de impresoras IP"
+            ]
+        }
     },
     education: {
         title: "// Educación",
@@ -48,11 +69,11 @@ export const es = {
         title: "// Certificaciones",
         provider: "Cisco Networking Academy",
         certs: {
-            ccna: "CCNA: Fundamentos de Conmutación y Enrutamiento",
+            ccna: "CCNA: Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas",
             threats: "Gestión de amenazas cibernéticas",
             defense: "Defensa de la red",
             endpoints: "Seguridad de Terminales",
-            devices: "Dispositivos de Red y Configuración",
+            devices: "Dispositivos de Red y Configuración Inicial",
             basics: "Conceptos básicos de redes",
             intro: "Introducción a la Ciberseguridad",
             awareness: "Conciencia digital"

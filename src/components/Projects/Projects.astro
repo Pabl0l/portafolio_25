@@ -6,7 +6,7 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
 
 <section class="projects" id="projects">
   <div class="container">
-    <h2 class="section-title glitch-text" data-text="// Projects">// Projects</h2>
+    <h2 class="section-title glitch-text" data-i18n="projects.title" data-text="// Projects">// Projects</h2>
     
     <div class="projects-grid">
       <div class="project-card">
@@ -15,13 +15,13 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
         </div>
         <div class="project-content">
           <h3>UniArauca</h3>
-          <p>MPA para representación web oficial de la universidad de Arauca (info e inscripciones).</p>
+          <p data-i18n="projects.uniarauca.desc">MPA para representación web oficial de la universidad de Arauca (info e inscripciones).</p>
           <div class="tech-stack">
             <span>React</span>
             <span>CSS</span>
             <span>TypeScript</span>
           </div>
-          <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
             View Project →
           </a>
         </div>
@@ -33,13 +33,13 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
         </div>
         <div class="project-content">
           <h3>dap nfc</h3>
-          <p>MPA catálogo oficial de dapNFC con información del producto y contacto con el vendedor.</p>
+          <p data-i18n="projects.dapnfc.desc">MPA catálogo oficial de dapNFC con información del producto y contacto con el vendedor.</p>
           <div class="tech-stack">
             <span>Next.js</span>
             <span>Tailwind</span>
             <span>TypeScript</span>
           </div>
-          <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
             View Project →
           </a>
         </div>
@@ -51,12 +51,12 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
         </div>
         <div class="project-content">
           <h3>Merge Helper</h3>
-          <p>Extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente.</p>
+          <p data-i18n="projects.mergehelper.desc">Extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente.</p>
           <div class="tech-stack">
             <span>Python</span>
             <span>VS Code API</span>
           </div>
-          <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="projects.viewProject">
             View Project →
           </a>
         </div>
@@ -64,8 +64,8 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
 
       <div class="project-card">
         <div class="project-content full-width">
-          <h3>Python Scripts</h3>
-          <p>Recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos.</p>
+          <h3 data-i18n="projects.scripts.title">Python Scripts</h3>
+          <p data-i18n="projects.scripts.desc">Recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos.</p>
           <div class="tech-stack">
             <span>Python</span>
           </div>
@@ -183,3 +183,32 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     transform: translateX(4px);
   }
 </style>
+
+<script>
+  import { languages, defaultLang, type Language } from '../../i18n';
+
+  function updateContent() {
+    const lang = (localStorage.getItem('language') as Language) || defaultLang;
+    const t = languages[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key) {
+        const keys = key.split('.');
+        let value: any = t;
+        for (const k of keys) {
+          value = value?.[k];
+        }
+        if (value && typeof value === 'string') {
+          el.textContent = value;
+          if (el.hasAttribute('data-text')) {
+            el.setAttribute('data-text', value);
+          }
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', updateContent);
+  window.addEventListener('languageChanged', updateContent);
+</script>
