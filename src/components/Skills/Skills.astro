@@ -1,71 +1,53 @@
+---
+---
+
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="section-title" data-i18n="skills.title">//Perfil  y Habilidade</h2>
+    
     <div class="profile-grid">
-      <div class="profile-card draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.whoami">$ whoami</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="profile-card">
+        <h3 data-i18n="skills.whoami">$ whoami</h3>
         <p data-i18n="skills.whoamiText">Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.</p>
       </div>
 
-      <div class="profile-card draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.objective">$ cat objective.txt</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="profile-card">
+        <h3 data-i18n="skills.objective">$ cat objective.txt</h3>
         <p data-i18n="skills.objectiveText">Desarrollar, mantener y dar soporte de software, red de internet o hardware para una empresa o cliente.</p>
       </div>
     </div>
 
     <div class="skills-grid">
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.webDev">Desarrollo Web</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.webDev">Desarrollo Web</h3>
         <p class="skill-tags">> React > JavaScript > CSS > HTML</p>
       </div>
 
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.programming">Programación</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.programming">Programación</h3>
         <p class="skill-tags">> Java > Python</p>
       </div>
 
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.networking">Redes</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.networking">Redes</h3>
         <p class="skill-tags">> Cisco (L2/L3) > IPv4/IPv6 > VLAN > DHCP > NAT</p>
       </div>
 
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.systems">Sistemas y Herramientas</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.systems">Sistemas y Herramientas</h3>
         <p class="skill-tags">> Linux > Windows > VirtualBox > Figma > Packet Tracer</p>
       </div>
 
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.security">Seguridad</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.security">Seguridad</h3>
         <p class="skill-tags">> Firewalls > Vulnerability Analysis > Best Practices</p>
       </div>
 
-      <div class="skill-category draggable">
-        <div class="window-bar">
-          <h3 data-i18n="skills.categories.hardware">Hardware</h3>
-          <button class="window-close">×</button>
-        </div>
+      <div class="skill-category">
+        <h3 data-i18n="skills.categories.hardware">Hardware</h3>
         <p class="skill-tags">> Assembly > Repair > Diagnostics</p>
       </div>
     </div>
-    <button id="reset-windows">Reset Windows</button>
   </div>
 </section>
 
@@ -81,19 +63,6 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
-  #reset-windows {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    background: var(--color-matrix-accent);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: var(--font-terminal);
-  }
 
   .profile-grid {
     display: grid;
@@ -106,7 +75,7 @@
     background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
-    padding: 0;
+    padding: 1.5rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
   }
@@ -117,10 +86,17 @@
     transform: translateY(-4px);
   }
 
+  .profile-card h3 {
+    font-family: var(--font-matrix);
+    color: var(--color-matrix-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
   .profile-card p {
     color: #ddd;
     line-height: 1.6;
-    margin: 1.5rem;
+    margin: 0;
   }
 
   .skills-grid {
@@ -133,7 +109,7 @@
     background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
     border-radius: 8px;
-    padding: 0;
+    padding: 1.5rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
   }
@@ -144,43 +120,18 @@
     transform: translateY(-4px);
   }
 
+  .skill-category h3 {
+    font-family: var(--font-matrix);
+    color: var(--color-matrix-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
   .skill-tags {
     font-family: var(--font-terminal);
     color: #ddd;
     line-height: 1.6;
-    margin: 1.5rem;
-  }
-  
-  .window-bar {
-    background: var(--color-matrix-primary);
-    color: var(--color-matrix-bg);
-    padding: 0.5rem;
-    cursor: move;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-  }
-
-  .window-bar h3 {
     margin: 0;
-    font-size: 1rem;
-    font-family: var(--font-terminal);
-    color: var(--color-matrix-bg);
-  }
-
-  .window-close {
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
   }
 
   @media (max-width: 768px) {
@@ -221,49 +172,4 @@
 
   document.addEventListener('DOMContentLoaded', updateContent);
   window.addEventListener('languageChanged', updateContent);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    interact('.draggable')
-      .draggable({
-        allowFrom: '.window-bar',
-        inertia: true,
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: 'parent',
-            endOnly: true
-          })
-        ],
-        autoScroll: true,
-        listeners: {
-          move (event) {
-            const target = event.target
-            const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-            const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-            target.style.transform = `translate(${x}px, ${y}px)`
-
-            target.setAttribute('data-x', x)
-            target.setAttribute('data-y', y)
-          },
-        }
-      })
-
-    // Close buttons
-    document.querySelectorAll('.window-close').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.target.closest('.draggable').style.display = 'none';
-      });
-    });
-
-    // Reset button
-    const resetBtn = document.getElementById('reset-windows');
-    resetBtn.addEventListener('click', () => {
-      document.querySelectorAll('.draggable').forEach(el => {
-        el.style.display = 'grid'; // or 'block'
-        el.style.transform = 'translate(0px, 0px)';
-        el.setAttribute('data-x', 0);
-        el.setAttribute('data-y', 0);
-      });
-    });
-  });
 </script>
