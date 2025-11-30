@@ -35,6 +35,33 @@ body {
   box-sizing: border-box;
 }
 
+/* Text selection styling */
+::selection {
+  background: rgba(57, 255, 20, 0.3);
+  color: var(--color-matrix-primary);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+::-moz-selection {
+  background: rgba(57, 255, 20, 0.3);
+  color: var(--color-matrix-primary);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+/* Focus styling for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-matrix-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-matrix-primary);
+  outline-offset: 4px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
 /* Scrollbar styling for Webkit browsers */
 ::-webkit-scrollbar {
   width: 8px;
