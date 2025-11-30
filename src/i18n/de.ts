@@ -3,7 +3,8 @@ export const de = {
         name: "Pablo Olivera",
         title: "Techniker für Computersystemwartung",
         motto: "> ich hasse Probleme, also werde ich sie eins nach dem anderen beheben",
-        copyEmail: "E-Mail"
+        copyEmail: "E-Mail",
+        resume: "Lebenslauf"
     },
     navbar: {
         home: "Startseite",

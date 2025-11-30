@@ -3,7 +3,8 @@ export const en = {
         name: "Pablo Olivera",
         title: "Computer Systems Maintenance Technician",
         motto: "> i hate problems so i will fix them one by one",
-        copyEmail: "Email"
+        copyEmail: "Email",
+        resume: "Resume"
     },
     navbar: {
         home: "Home",
