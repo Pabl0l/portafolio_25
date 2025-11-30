@@ -19,7 +19,8 @@ export const es = {
         items: {
             bugHunter: "Cazador de Errores, Bugs y Fallos de Sistema",
             mercenary: "Mercenario Especializado en Defensa Digital y Mitigación de Riesgos",
-            exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos"
+            exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos",
+            fullstackWorker: "Obrero Fullstack para la construcción de sitios web"
         }
     },
     skills: {

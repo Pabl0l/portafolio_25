@@ -1,25 +1,40 @@
 ---
 import { Image } from 'astro:assets';
-import serviceImage from '../../assets/images/ofreciendo.png';
+import defaultImage from '../../assets/images/señalando_derecha.png';
+import bugHunterImage from '../../assets/images/cazador.png';
+import mercenaryImage from '../../assets/images/mercenario.png';
+import exterminatorImage from '../../assets/images/exterminador.png';
+import fullstackImage from '../../assets/images/obrero.png';
+
+const imagePaths = {
+  default: bugHunterImage.src,
+  bugHunter: bugHunterImage.src,
+  mercenary: mercenaryImage.src,
+  exterminator: exterminatorImage.src,
+  fullstackWorker: fullstackImage.src,
+};
 ---
 
-<section class="services" id="services">
+<section class="services" id="services" data-service-images={JSON.stringify(imagePaths)}>
   <div class="container">
     <h2 class="section-title glitch-text" data-i18n="services.title" data-text="// Services">// Services</h2>
     <div class="services-content">
       <div class="service-list">
-        <div class="service-item">
+        <div class="service-item" data-image="bugHunter">
           <h3 data-i18n="services.items.bugHunter">Cazador de Errores, Bugs y Fallos de Sistema</h3>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-image="mercenary">
           <h3 data-i18n="services.items.mercenary">Mercenario Especializado en Defensa Digital y Mitigación de Riesgos</h3>
         </div>
-        <div class="service-item">
+        <div class="service-item" data-image="exterminator">
           <h3 data-i18n="services.items.exterminator">Exterminador de Fallos en Redes y Sistemas Críticos</h3>
+        </div>
+        <div class="service-item" data-image="fullstackWorker">
+          <h3 data-i18n="services.items.fullstackWorker">Obrero Fullstack para la construcción de sitios web</h3>
         </div>
       </div>
       <div class="service-image">
-        <Image src={serviceImage} alt="Services" />
+        <Image src={bugHunterImage} alt="Service Preview" id="service-preview-img" />
       </div>
     </div>
   </div>
@@ -66,6 +81,7 @@ import serviceImage from '../../assets/images/ofreciendo.png';
     padding: 2rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    cursor: pointer;
   }
 
   .service-item:hover {
@@ -79,20 +95,24 @@ import serviceImage from '../../assets/images/ofreciendo.png';
     color: var(--color-matrix-primary);
     margin: 0 0 0.5rem 0;
     font-size: 1.4rem;
+    pointer-events: none; /* Prevent h3 from interfering with hover */
   }
 
   .service-image {
-    background: rgba(0,0,0,0.5);
-    border: 1px solid var(--color-matrix-primary);
-    border-radius: 8px;
-    padding: 1rem;
-    backdrop-filter: blur(10px);
+    /* Removed background, border, padding, backdrop-filter */
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .service-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    object-fit: contain; /* Changed to contain to ensure full image visibility without cropping */
+    transition: opacity 0.3s ease;
+    filter: drop-shadow(0 0 2px var(--color-matrix-primary));
   }
 </style>
 
@@ -121,6 +141,33 @@ import serviceImage from '../../assets/images/ofreciendo.png';
     });
   }
 
-  document.addEventListener('DOMContentLoaded', updateContent);
+  document.addEventListener('DOMContentLoaded', () => {
+    updateContent();
+    
+    const servicesSection = document.getElementById('services');
+    const serviceItems = document.querySelectorAll('.service-item');
+    const previewImage = document.getElementById('service-preview-img') as HTMLImageElement;
+
+    if (servicesSection && previewImage) {
+      try {
+        const imagesData = servicesSection.getAttribute('data-service-images');
+        if (imagesData) {
+          const images = JSON.parse(imagesData);
+
+          serviceItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+              const imageKey = item.getAttribute('data-image');
+              if (imageKey && images[imageKey]) {
+                previewImage.src = images[imageKey];
+              }
+            });
+          });
+        }
+      } catch (e) {
+        console.error('Error parsing service images:', e);
+      }
+    }
+  });
+
   window.addEventListener('languageChanged', updateContent);
 </script>

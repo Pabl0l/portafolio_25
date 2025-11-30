@@ -1,7 +1,10 @@
 ---
 import projectImg1 from '../../assets/images/UNAR.png';
+import projectImg1Green from '../../assets/images/unar_verde.jpg';
 import projectImg2 from '../../assets/images/DAPNFC.png';
+import projectImg2Green from '../../assets/images/dapnfc_verde.jpg';
 import projectImg3 from '../../assets/images/Merge_Helper.png';
+import projectImg3Green from '../../assets/images/merge_helper_verde.jpg';
 ---
 
 <section class="projects" id="projects">
@@ -11,7 +14,8 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     <div class="projects-grid">
       <a href="https://uniarauca.netlify.app" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
-          <img src={projectImg1.src} alt="UniArauca" />
+          <img src={projectImg1.src} alt="UniArauca" class="img-normal" />
+          <img src={projectImg1Green.src} alt="UniArauca" class="img-green" />
         </div>
         <div class="project-content">
           <h3>UniArauca</h3>
@@ -26,7 +30,8 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
 
       <a href="https://dapnfc.netlify.app" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
-          <img src={projectImg2.src} alt="dap nfc" />
+          <img src={projectImg2.src} alt="dap nfc" class="img-normal" />
+          <img src={projectImg2Green.src} alt="dap nfc" class="img-green" />
         </div>
         <div class="project-content">
           <h3>dap nfc</h3>
@@ -41,7 +46,8 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
 
       <a href="https://marketplace.visualstudio.com/items?itemName=JuanPabloOliveraMendoza.merge-helper" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-image">
-          <img src={projectImg3.src} alt="Merge Helper" />
+          <img src={projectImg3.src} alt="Merge Helper" class="img-normal" />
+          <img src={projectImg3Green.src} alt="Merge Helper" class="img-green" />
         </div>
         <div class="project-content">
           <h3>Merge Helper</h3>
@@ -114,13 +120,30 @@ import projectImg3 from '../../assets/images/Merge_Helper.png';
     width: 100%;
     height: 200px;
     overflow: hidden;
+    position: relative;
   }
 
   .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .img-green {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .img-normal {
+    z-index: 1;
+  }
+
+  .project-card:hover .img-green {
+    opacity: 0;
   }
 
   .project-card:hover .project-image img {
