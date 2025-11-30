@@ -26,9 +26,12 @@ export const de = {
     skills: {
         title: "// Profil & Fähigkeiten",
         whoami: "$ whoami",
-        whoamiText: "Systemtechniker mit Fähigkeiten in Erstellung, Reparatur und Wartung von Hardware und Software. Praktische Erfahrung in Webentwicklung und Netzwerkgerätekonfiguration (Switches/Router) über SSH. Soft Skills entwickelt als akademischer Monitor.",
-        objective: "$ cat objective.txt",
-        objectiveText: "Entwickeln, warten und Support für Software, Internetnetze oder Hardware für ein Unternehmen oder einen Kunden bereitstellen.",
+        whoamiText: "Ich bin begeistert von Technologie und Problemlösung. Ich betrachte mich als Autodidakt, neugierig und immer bereit, etwas Neues zu lernen.",
+        objective: "$ cat profile.txt",
+        objectiveText: "Systemtechniker mit Fähigkeiten in Erstellung, Reparatur und Wartung von Hardware und Software. Praktische Erfahrung in Webentwicklung und Netzwerkgerätekonfiguration (Switches/Router) über SSH. Soft Skills entwickelt als akademischer Monitor.",
+        whatAmI: "Was bin ich also?",
+        descartesQuote: "«Was bin ich also? Ein denkendes Ding. Und was ist ein denkendes Ding? Es ist ein Ding, das zweifelt, einsieht, bejaht, verneint, will, nicht will, das auch sich etwas vorstellt und empfindet.»",
+        descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Webentwicklung",
             programming: "Programmierung",

@@ -26,9 +26,12 @@ export const en = {
     skills: {
         title: "// Profile & Skills",
         whoami: "$ whoami",
-        whoamiText: "Systems technician with skills in creation, repair and maintenance of hardware and software. Practical experience in web development and network equipment configuration (switches/routers) via SSH. Soft skills developed as academic monitor.",
-        objective: "$ cat objective.txt",
-        objectiveText: "Develop, maintain and provide software, internet network or hardware support for a company or client.",
+        whoamiText: "I am passionate about technology and problem solving. I consider myself a self-taught, curious person who is always willing to learn something new.",
+        objective: "$ cat profile.txt",
+        objectiveText: "Systems technician with skills in creation, repair and maintenance of hardware and software. Practical experience in web development and network equipment configuration (switches/routers) via SSH. Soft skills developed as academic monitor.",
+        whatAmI: "What am I, then?",
+        descartesQuote: "«What am I then? A thing which thinks. What is a thing which thinks? It is a thing which doubts, understands, affirms, denies, wills, refuses, which also imagines and feels.»",
+        descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Web Development",
             programming: "Programming",

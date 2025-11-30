@@ -26,9 +26,12 @@ export const es = {
     skills: {
         title: "// Perfil y habilidades",
         whoami: "$ whoami",
-        whoamiText: "Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.",
-        objective: "$ cat objective.txt",
-        objectiveText: "Desarrollar, mantener y dar soporte de software, red de internet o hardware para una empresa o cliente.",
+        whoamiText: "Soy el holotipo llanero, una aproximación de guitarrista bohemio, un buen amigo, nómada, reservado, curioso, siempre dispuesto a aprender algo nuevo.",
+        objective: "$ cat profile.txt",
+        objectiveText: "Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.",
+        whatAmI: "¿Qué soy, entonces?",
+        descartesQuote: "«¿Qué soy, entonces? Una cosa que piensa. Y ¿qué es una cosa que piensa? Es una cosa que duda, que entiende, que afirma, que niega, que quiere, que no quiere, que imagina también, y que siente.»",
+        descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Desarrollo Web",
             programming: "Programación",
