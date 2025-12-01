@@ -1,17 +1,18 @@
 ---
 ---
 <section class="ascii-art-section">
-  <div class="education-item">
+  <div class="planet">
     <pre id="ascii-earth"></pre>
   </div>
 </section>
 
 <style>
-  .education-item {
+
+.planet {
+    border-radius: 100%;
     background: rgba(0,0,0,0.7); /* Darker background */
     border: 1px solid var(--color-matrix-primary);
-    border-radius: 8px;
-    padding: 2rem; /* Revert padding */
+    padding: 0px 12px 16px 12px;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     overflow: hidden;
@@ -20,7 +21,7 @@
     align-items: center;
   }
 
-  .education-item:hover {
+  .planet:hover {
     background: rgba(57, 255, 20, 0.15);
     box-shadow: 0 0 25px rgba(57, 255, 20, 0.3);
   }
