@@ -1,17 +1,26 @@
 ---
+import AsciiEarth from '../AsciiEarth/AsciiEarth.astro';
 ---
 
 <section class="education" id="education">
   <div class="container">
     <h2 class="section-title glitch-text" data-i18n="education.title" data-text="// Education">// Education</h2>
     
-    <div class="education-item">
-      <div class="education-header">
-        <h3 data-i18n="education.degree">Técnico en Mantenimiento de Sistemas Informáticos</h3>
-        <span class="status" data-i18n="education.status">En prácticas</span>
+    <div class="education-content">
+      <div class="education-list">
+        <div class="education-item">
+          <div class="education-header">
+            <h3 data-i18n="education.degree">Técnico en Mantenimiento de Sistemas Informáticos</h3>
+            <span class="status" data-i18n="education.status">En prácticas</span>
+          </div>
+          <p class="institution" data-i18n="education.institution">Institución Universitaria de Barranquilla</p>
+          <p class="period" data-i18n="education.period">2024-04 : 2026-04</p>
+        </div>
       </div>
-      <p class="institution" data-i18n="education.institution">Institución Universitaria de Barranquilla</p>
-      <p class="period" data-i18n="education.period">2024-04 : 2026-04</p>
+      
+      <div class="ascii-earth-wrapper">
+        <AsciiEarth />
+      </div>
     </div>
   </div>
 </section>
@@ -36,6 +45,25 @@
     margin-bottom: 3rem;
   }
 
+  .education-content {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .education-list {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .ascii-earth-wrapper {
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .education-item {
     background: rgba(0,0,0,0.5);
     border: 1px solid var(--color-matrix-primary);
@@ -43,6 +71,7 @@
     padding: 2rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    height: fit-content;
   }
 
   .education-item:hover {
@@ -86,6 +115,22 @@
     color: #aaa;
     margin: 0;
     font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .education-content {
+      flex-direction: column;
+    }
+
+    .education-list,
+    .ascii-earth-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .ascii-earth-wrapper {
+      margin-top: 2rem;
+    }
   }
 </style>
 
