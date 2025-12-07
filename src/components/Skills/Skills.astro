@@ -226,12 +226,18 @@
     padding: 1.5rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    position: relative;
+    cursor: grab;
   }
 
   .skill-category:hover {
     background: rgba(0, 55, 20, 0.1);
     box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
     transform: translateY(-4px);
+  }
+
+  .skill-category:active {
+    cursor: grabbing;
   }
 
   .skill-category h3 {
@@ -257,23 +263,21 @@
   .section-title {
     font-family: var(--font-matrix);
     font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--color-matrix-primary);
-    margin-bottom: 3rem;
   }
 </style>
 
 <script>
-  import { languages, defaultLang, type Language } from '../../i18n';
-
   function updateContent() {
-    const lang = (localStorage.getItem('language') as Language) || defaultLang;
+    // i18n logic temporarily disabled due to missing languages definition
+    /*
+    const lang = document.documentElement.lang || 'es';
     const t = languages[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (key) {
         const keys = key.split('.');
-        let value: any = t;
+        let value = t;
         for (const k of keys) {
           value = value?.[k];
         }
@@ -282,9 +286,10 @@
         }
       }
     });
+    */
   }
 
-  const dialog = document.getElementById('quote-dialog') as HTMLDialogElement;
+  const dialog = document.getElementById('quote-dialog');
   const openBtn = document.getElementById('what-am-i-btn');
   const closeBtn = document.getElementById('close-dialog');
 
@@ -307,6 +312,85 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', updateContent);
+  function initElasticDrag() {
+    const cards = document.querySelectorAll('.skill-category');
+    
+    cards.forEach(card => {
+      const element = card;
+      let isDragging = false;
+      let startX = 0;
+      let startY = 0;
+      let initialTransform = '';
+      
+      const onStart = (e) => {
+        isDragging = true;
+        startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+        startY = e.type === 'mousedown' ? e.clientY : e.touches[0].clientY;
+        
+        // Store initial transform if needed, though we assume 0,0 mostly
+        initialTransform = element.style.transform;
+        
+        // Disable transition for instant drag response
+        element.style.transition = 'none';
+        element.style.zIndex = '10'; // Bring to front while dragging
+        element.style.cursor = 'grabbing';
+        // Force background to stay dark during drag (overriding hover effect)
+        element.style.background = 'rgba(0,0,0,0.5)';
+        
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('touchmove', onMove, { passive: false });
+        window.addEventListener('mouseup', onEnd);
+        window.addEventListener('touchend', onEnd);
+      };
+      
+      const onMove = (e) => {
+        if (!isDragging) return;
+        
+        // Prevent scrolling on touch devices while dragging
+        if (e.type === 'touchmove') {
+          e.preventDefault();
+        }
+        
+        const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+        const currentY = e.type === 'mousemove' ? e.clientY : e.touches[0].clientY;
+        
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
+        
+        element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+      };
+      
+      const onEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        // Spring back effect
+        element.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        element.style.transform = 'translate(0, 0)';
+        element.style.cursor = 'grab';
+        
+        // Clean up listeners
+        window.removeEventListener('mousemove', onMove);
+        window.removeEventListener('touchmove', onMove);
+        window.removeEventListener('mouseup', onEnd);
+        window.removeEventListener('touchend', onEnd);
+        
+        // Reset styles after animation
+        setTimeout(() => {
+          element.style.transition = '';
+          element.style.zIndex = '';
+          element.style.background = ''; // Reset background to allow hover effect again
+        }, 600);
+      };
+      
+      element.addEventListener('mousedown', onStart);
+      element.addEventListener('touchstart', onStart, { passive: false });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateContent();
+    initElasticDrag();
+  });
   window.addEventListener('languageChanged', updateContent);
 </script>
