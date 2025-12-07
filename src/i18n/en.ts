@@ -2,8 +2,8 @@ export const en = {
     hero: {
         name: "Pablo Olivera",
         title: "Computer Systems Maintenance Technician",
-        motto: "> i hate problems so i will fix them one by one",
-        copyEmail: "Email",
+        motto: "> I hate problems, so I'll fix them one by one",
+        copyEmail: " Copy Email",
         resume: "Resume"
     },
     navbar: {
@@ -18,26 +18,26 @@ export const en = {
     services: {
         title: "// Services",
         items: {
-            bugHunter: "Bug Hunter, System Errors and Glitches",
+            bugHunter: "System Error Hunter",
             mercenary: "Mercenary Specialized in Digital Defense and Risk Mitigation",
-            exterminator: "Exterminator of Failures in Critical Networks and Systems",
-            fullstackWorker: "Fullstack Worker for Website Construction"
+            exterminator: "Network Failure Exterminator",
+            fullstackWorker: "Full-Stack Builder for Website Construction"
         }
     },
     skills: {
-        title: "// Profile & Skills",
+        title: "// Profile and Skills",
         whoami: "$ whoami",
-        whoamiText: "I am passionate about technology and problem solving. I consider myself a self-taught, curious person who is always willing to learn something new.",
+        whoamiText: "I am the holotype of the Araucanian plainsman: somewhat a bohemian guitarist, a good friend, nomadic, reserved, curious, and always willing to learn something new.",
         objective: "$ cat profile.txt",
-        objectiveText: "Systems technician with skills in creation, repair and maintenance of hardware and software. Practical experience in web development and network equipment configuration (switches/routers) via SSH. Soft skills developed as academic monitor.",
+        objectiveText: "Computer systems technician with skills in hardware repair and maintenance, and software creation. Hands-on experience in web development, network equipment configuration (switches/routers), and on-site technical support. Soft skills developed as an academic tutor.",
         whatAmI: "What am I, then?",
-        descartesQuote: "«What am I then? A thing which thinks. What is a thing which thinks? It is a thing which doubts, understands, affirms, denies, wills, refuses, which also imagines and feels.»",
+        descartesQuote: "\"What am I, then? A thing that thinks. And what is a thing that thinks? It is a thing that doubts, understands, affirms, denies, wills, refuses, and also imagines and perceives.\"",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Web Development",
             programming: "Programming",
             networking: "Networking",
-            systems: "Systems & Tools",
+            systems: "Systems and Tools",
             security: "Security",
             hardware: "Hardware"
         }
@@ -46,27 +46,27 @@ export const en = {
         title: "// Projects",
         viewProject: "View Project →",
         uniarauca: {
-            desc: "Created an MPA for the official web representation of the University of Arauca (info and registration)."
+            desc: "I created the official website for the University of Arauca (information and registrations)."
         },
         dapnfc: {
-            desc: "Implemented an MPA as an official catalog for dapNFC with product information and seller contact."
+            desc: "I implemented a website as the official catalog for dapNFC with product information and seller contact."
         },
         mergehelper: {
-            desc: "Built a VS Code extension to detect and merge duplicate code blocks, ensuring you always work with the latest version."
+            desc: "I built a VS Code extension to detect and merge duplicate code blocks, ensuring work is always done with the latest version."
         },
         scripts: {
             title: "Python Scripts",
-            desc: "Authored a collection of Python scripts to solve various automation and data processing problems."
+            desc: "I developed a compilation of Python scripts to solve various automation and data processing problems."
         }
     },
     experience: {
         title: "// Experience",
         mired: {
             position: "Computer Systems Maintenance and Repair Intern",
-            date: "10/28/2025 - Present",
+            date: "28/10/2025 - Present",
             responsibilities: [
-                "Installation and physical repair of equipment",
-                "PC formatting, OS installation, backup creation",
+                "Physical installation and repair of equipment",
+                "PC formatting, operating system installation, and backup creation",
                 "LAN network configuration and switch/router maintenance",
                 "Technical support for internal users",
                 "IP printer maintenance"
@@ -76,8 +76,8 @@ export const en = {
     education: {
         title: "// Education",
         degree: "Computer Systems Maintenance Technician",
-        institution: "Institución Universitaria de Barranquilla",
-        status: "Internship",
+        institution: "University Institution of Barranquilla",
+        status: "Currently in Internship",
         period: "2024-04 : 2026-04"
     },
     certifications: {
@@ -86,35 +86,35 @@ export const en = {
         certs: {
             ccna: {
                 name: "CCNA: Switching, Routing, and Wireless Essentials",
-                date: "Aug 28, 2025"
+                date: "28 Aug 2025"
             },
             threats: {
                 name: "Cyber Threat Management",
-                date: "May 28, 2025"
+                date: "28 May 2025"
             },
             defense: {
                 name: "Network Defense",
-                date: "May 26, 2025"
+                date: "26 May 2025"
             },
             endpoints: {
                 name: "Endpoint Security",
-                date: "May 23, 2025"
+                date: "23 May 2025"
             },
             devices: {
                 name: "Network Devices and Initial Configuration",
-                date: "Apr 07, 2025"
+                date: "07 Apr 2025"
             },
             basics: {
                 name: "Networking Basics",
-                date: "Mar 21, 2025"
+                date: "21 Mar 2025"
             },
             intro: {
                 name: "Introduction to Cybersecurity",
-                date: "Mar 16, 2025"
+                date: "16 Mar 2025"
             },
             awareness: {
                 name: "Digital Awareness",
-                date: "Mar 10, 2025"
+                date: "10 Mar 2025"
             }
         }
     }

@@ -27,9 +27,9 @@ export const es = {
     skills: {
         title: "// Perfil y habilidades",
         whoami: "$ whoami",
-        whoamiText: "Soy el holotipo llanero, una aproximación de guitarrista bohemio, un buen amigo, nómada, reservado, curioso, siempre dispuesto a aprender algo nuevo.",
+        whoamiText: "Soy el holotipo del llanero araucano, aproximadamente un guitarrista bohemio, un buen amigo, nómada, reservado, curioso, siempre dispuesto a aprender algo nuevo.",
         objective: "$ cat profile.txt",
-        objectiveText: "Técnico en sistemas con habilidades en creación, reparación y mantenimiento de hardware y software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) mediante SSH. Habilidades blandas desarrolladas como monitor académico.",
+        objectiveText: "Técnico en sistemas informáticos con habilidades en reparación y mantenimiento de hardware y creación de software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) y soporte técnico presencial. Habilidades blandas desarrolladas como monitor académico.",
         whatAmI: "¿Qué soy, entonces?",
         descartesQuote: "«¿Qué soy, entonces? Una cosa que piensa. Y ¿qué es una cosa que piensa? Es una cosa que duda, que entiende, que afirma, que niega, que quiere, que no quiere, que imagina también, y que siente.»",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
@@ -46,16 +46,16 @@ export const es = {
         title: "// Proyectos",
         viewProject: "Ver Proyecto →",
         uniarauca: {
-            desc: "Creé una MPA para la representación web oficial de la universidad de Arauca (info e inscripciones)."
+            desc: "Creé un sitio web para la representación web oficial de la universidad de Arauca (info e inscripciones)."
         },
         dapnfc: {
-            desc: "Implementé una MPA como catálogo oficial de dapNFC con información del producto y contacto con el vendedor."
+            desc: "Implementé un sitio web como catálogo oficial de dapNFC con información del producto y contacto con el vendedor."
         },
         mergehelper: {
             desc: "Construí una extensión de VS Code para detectar y fusionar bloques de código duplicados, asegurando trabajar siempre con la versión más reciente."
         },
         scripts: {
-            title: "Python Scripts",
+            title: "Scripts de Python",
             desc: "Elaboré una recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos."
         }
     },

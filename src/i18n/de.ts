@@ -1,9 +1,9 @@
 export const de = {
     hero: {
         name: "Pablo Olivera",
-        title: "Techniker für Computersystemwartung",
-        motto: "> ich hasse Probleme, also werde ich sie eins nach dem anderen beheben",
-        copyEmail: "E-Mail",
+        title: "Techniker für Wartung von Computersystemen",
+        motto: "> Ich hasse Probleme – also löse ich sie Stück für Stück",
+        copyEmail: " E-Mail kopieren",
         resume: "Lebenslauf"
     },
     navbar: {
@@ -11,33 +11,33 @@ export const de = {
         skills: "Fähigkeiten",
         projects: "Projekte",
         experience: "Erfahrung",
-        education: "Bildung",
-        certifications: "Zertifikate",
+        education: "Ausbildung",
+        certifications: "Zertifizierungen",
         services: "Dienstleistungen"
     },
     services: {
         title: "// Dienstleistungen",
         items: {
-            bugHunter: "Fehlerjäger, Systemfehler und Störungen",
-            mercenary: "Söldner spezialisiert auf digitale Verteidigung und Risikominderung",
-            exterminator: "Vernichter von Ausfällen in kritischen Netzwerken und Systemen",
-            fullstackWorker: "Fullstack-Arbeiter für den Website-Bau"
+            bugHunter: "Jäger von Systemfehlern",
+            mercenary: "Söldner für digitale Verteidigung und Risikominimierung",
+            exterminator: "Vernichter kritischer Netzwerkfehler",
+            fullstackWorker: "Fullstack-Baumeister für Webseitenerstellung"
         }
     },
     skills: {
-        title: "// Profil & Fähigkeiten",
+        title: "// Profil und Fähigkeiten",
         whoami: "$ whoami",
-        whoamiText: "Ich bin begeistert von Technologie und Problemlösung. Ich betrachte mich als Autodidakt, neugierig und immer bereit, etwas Neues zu lernen.",
+        whoamiText: "Ich bin der Holotyp des Llanero aus Arauca: ein etwas bohemischer Gitarrist, guter Freund, Nomade, zurückhaltend, neugierig und stets bereit, etwas Neues zu lernen.",
         objective: "$ cat profile.txt",
-        objectiveText: "Systemtechniker mit Fähigkeiten in Erstellung, Reparatur und Wartung von Hardware und Software. Praktische Erfahrung in Webentwicklung und Netzwerkgerätekonfiguration (Switches/Router) über SSH. Soft Skills entwickelt als akademischer Monitor.",
+        objectiveText: "Techniker für Computersysteme mit Fähigkeiten in Hardware-Reparatur, Wartung und Softwareentwicklung. Praxiserfahrung in Webentwicklung, Konfiguration von Netzwerkgeräten (Switches/Routern) und technischem Support vor Ort. Ausgeprägte Soft Skills durch meine Tätigkeit als akademischer Tutor.",
         whatAmI: "Was bin ich also?",
-        descartesQuote: "«Was bin ich also? Ein denkendes Ding. Und was ist ein denkendes Ding? Es ist ein Ding, das zweifelt, einsieht, bejaht, verneint, will, nicht will, das auch sich etwas vorstellt und empfindet.»",
+        descartesQuote: "„Was bin ich also? Ein Ding, das denkt. Und was ist ein Ding, das denkt? Ein Ding, das zweifelt, versteht, bejaht, verneint, will, nicht will, sich vorstellt und empfindet.“",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Webentwicklung",
             programming: "Programmierung",
-            networking: "Netzwerke",
-            systems: "Systeme & Werkzeuge",
+            networking: "Netzwerktechnik",
+            systems: "Systeme und Werkzeuge",
             security: "Sicherheit",
             hardware: "Hardware"
         }
@@ -46,75 +46,75 @@ export const de = {
         title: "// Projekte",
         viewProject: "Projekt ansehen →",
         uniarauca: {
-            desc: "Erstellte eine MPA für die offizielle Webpräsenz der Universität von Arauca (Info und Anmeldung)."
+            desc: "Ich habe die offizielle Website der Universität von Arauca erstellt (Informationen und Einschreibungen)."
         },
         dapnfc: {
-            desc: "Implementierte eine MPA als offiziellen Katalog von dapNFC mit Produktinformationen und Verkäuferkontakt."
+            desc: "Ich habe eine Website als offiziellen Katalog für dapNFC entwickelt – mit Produktinformationen und Verkäuferkontakt."
         },
         mergehelper: {
-            desc: "Erbaute eine VS Code-Erweiterung, um doppelte Codeblöcke zu erkennen und zusammenzuführen, um sicherzustellen, dass Sie immer mit der neuesten Version arbeiten."
+            desc: "Ich habe eine VS-Code-Erweiterung erstellt, die doppelte Codeblöcke erkennt und zusammenführt, damit stets mit der neuesten Version gearbeitet wird."
         },
         scripts: {
-            title: "Python Scripts",
-            desc: "Verfasste eine Sammlung von Python-Skripten, um verschiedene Automatisierungs- und Datenverarbeitungsprobleme zu lösen."
+            title: "Python-Skripte",
+            desc: "Ich habe eine Sammlung von Python-Skripten entwickelt, um verschiedene Automatisierungs- und Datenverarbeitungsaufgaben zu lösen."
         }
     },
     experience: {
-        title: "// Erfahrung",
+        title: "// Berufserfahrung",
         mired: {
-            position: "Praktikant für Computersystemwartung und -reparatur",
-            date: "28.10.2025 - Heute",
+            position: "Technischer Praktikant für Wartung und Reparatur von Computersystemen",
+            date: "28.10.2025 – heute",
             responsibilities: [
-                "Installation und physische Reparatur von Geräten",
-                "PC-Formatierung, Betriebssysteminstallation, Erstellung von Backups",
-                "LAN-Netzwerkkonfiguration und Switch/Router-Wartung",
-                "Technischer Support für interne Benutzer",
+                "Physische Installation und Reparatur von Geräten",
+                "PC-Formatierung, Betriebssysteminstallation und Erstellung von Backups",
+                "LAN-Konfiguration und Wartung von Switches/Routern",
+                "Technischer Support für interne Nutzer",
                 "Wartung von IP-Druckern"
             ]
         }
     },
     education: {
-        title: "// Bildung",
-        degree: "Techniker für Computersystemwartung",
-        institution: "Institución Universitaria de Barranquilla",
-        status: "Praktikum",
-        period: "2024-04 : 2026-04"
+        title: "// Ausbildung",
+        degree: "Techniker für Wartung von Computersystemen",
+        institution: "Hochschule Barranquilla",
+        status: "Im Praktikum",
+        period: "04.2024 – 04.2026"
     },
     certifications: {
-        title: "// Zertifikate",
+        title: "// Zertifizierungen",
         provider: "Cisco Networking Academy",
         certs: {
             ccna: {
-                name: "CCNA: Grundlagen von Switching, Routing und Wireless",
+                name: "CCNA: Switching, Routing and Wireless Essentials",
                 date: "28. Aug. 2025"
             },
             threats: {
-                name: "Verwaltung von Cyber-Bedrohungen",
+                name: "Cyber Threat Management",
                 date: "28. Mai 2025"
             },
             defense: {
-                name: "Netzwerkverteidigung",
+                name: "Network Defense",
                 date: "26. Mai 2025"
             },
             endpoints: {
-                name: "Endpunktsicherheit",
+                name: "Endpoint Security",
                 date: "23. Mai 2025"
             },
             devices: {
-                name: "Netzwerkgeräte und Erstkonfiguration",
+                name: "Network Devices and Initial Configuration",
                 date: "07. Apr. 2025"
             },
             basics: {
-                name: "Netzwerkgrundlagen",
-                date: "21. Mrz. 2025"
+                name: "Networking Basics",
+                date: "21. März 2025"
             },
             intro: {
-                name: "Einführung in die Cybersicherheit",
-                date: "16. Mrz. 2025"
+                name: "Introduction to Cybersecurity",
+                date: "16. März 2025"
             },
             awareness: {
-                name: "Digitales Bewusstsein",
-                date: "10. Mrz. 2025"
+                name: "Digital Awareness",
+                date: "10. März 2025"
             }
         }
     }
