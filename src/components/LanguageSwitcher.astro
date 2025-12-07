@@ -34,7 +34,8 @@
     align-items: center;
   }
 
-  .language-switcher:hover {
+  .language-switcher:hover,
+  .language-switcher.touch-open {
     width: 9.5rem;
     justify-content: flex-start;
   }
@@ -61,7 +62,8 @@
   }
 
   /* Position inactive buttons when expanded */
-  .language-switcher:hover .lang-btn:not(.active) {
+  .language-switcher:hover .lang-btn:not(.active),
+  .language-switcher.touch-open .lang-btn:not(.active) {
     position: relative;
     opacity: 1;
     pointer-events: auto;
@@ -102,17 +104,53 @@
   document.addEventListener('DOMContentLoaded', () => {
     updateActiveButton();
     updatePageContent();
+    initTouchSupport();
   });
+
+  function initTouchSupport() {
+    const switcher = document.querySelector('.language-switcher');
+    
+    if (switcher) {
+      // Toggle on click (for mobile/touch)
+      switcher.addEventListener('click', (e) => {
+        // Only toggle if we are not clicking a specific inactive button that is about to fire
+        // Actually, just toggling is fine, the button click will handle selection
+        // However, we want to prevent toggling CLOSED if we just opened it.
+        // Simple logic: click toggles class.
+        switcher.classList.toggle('touch-open');
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!switcher.contains(e.target as Node)) {
+          switcher.classList.remove('touch-open');
+        }
+      });
+
+      // Close after scrolling (mobile UX improvement, optional but good)
+      window.addEventListener('scroll', () => {
+        if (switcher.classList.contains('touch-open')) {
+          switcher.classList.remove('touch-open');
+        }
+      }, { passive: true });
+    }
+  }
 
   // Add click listeners to language buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      // Remove stopPropagation to allow bubbling to the container (which handles toggle)
+      
       const lang = btn.getAttribute('data-lang') as Language;
       if (lang && lang in languages) {
-        currentLang = lang;
-        localStorage.setItem('language', lang);
-        updateActiveButton();
-        updatePageContent();
+        // If clicking the already selected language, do nothing specific (bubbling will toggle menu)
+        // If changing language, update and allow bubbling to close the menu
+        if (currentLang !== lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            updateActiveButton();
+            updatePageContent();
+        }
       }
     });
   });
