@@ -1,13 +1,20 @@
 ---
 ---
 <nav id="main-nav">
-  <a href="#top" data-i18n="navbar.home">Inicio</a>
-  <a href="#skills" data-i18n="navbar.skills">Habilidades</a>
-  <a href="#projects" data-i18n="navbar.projects">Proyectos</a>
-  <a href="#experience" data-i18n="navbar.experience">Experiencia</a>
-  <a href="#education" data-i18n="navbar.education">Educación</a>
-  <a href="#certifications" data-i18n="navbar.certifications">Certificados</a>
-  <a href="#services" data-i18n="navbar.services">Servicios</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="#top" data-i18n="navbar.home">Inicio</a>
+    <a href="#skills" data-i18n="navbar.skills">Habilidades</a>
+    <a href="#projects" data-i18n="navbar.projects">Proyectos</a>
+    <a href="#experience" data-i18n="navbar.experience">Experiencia</a>
+    <a href="#education" data-i18n="navbar.education">Educación</a>
+    <a href="#certifications" data-i18n="navbar.certifications">Certificados</a>
+    <a href="#services" data-i18n="navbar.services">Servicios</a>
+  </div>
 </nav>
 
 <style>
@@ -21,9 +28,34 @@
     padding: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1rem;
     z-index: 1000;
     backdrop-filter: blur(10px);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-matrix-primary);
+    transition: all 0.3s ease;
   }
 
   a {
@@ -42,6 +74,32 @@
     color: var(--color-matrix-bg);
     box-shadow: 0 0 15px var(--color-matrix-primary);
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none; /* Hidden by default on mobile */
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      background: rgba(0, 0, 0, 0.95);
+      border: 1px solid var(--color-matrix-primary);
+      border-radius: 8px;
+      flex-direction: column;
+      padding: 1rem;
+      min-width: 200px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
   }
 </style>
 
@@ -67,6 +125,36 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', updateContent);
+  function initMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (!target.closest('nav')) {
+          navLinks.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateContent();
+    initMobileMenu();
+  });
   window.addEventListener('languageChanged', updateContent);
 </script>
