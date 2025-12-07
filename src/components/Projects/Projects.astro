@@ -5,6 +5,7 @@ import projectImg2 from '../../assets/images/DAPNFC.png';
 import projectImg2Green from '../../assets/images/dapnfc_verde.jpg';
 import projectImg3 from '../../assets/images/Merge_Helper.png';
 import projectImg3Green from '../../assets/images/merge_helper_verde.jpg';
+import projectImg4 from '../../assets/images/python.png';
 ---
 
 <section class="projects" id="projects">
@@ -59,15 +60,19 @@ import projectImg3Green from '../../assets/images/merge_helper_verde.jpg';
         </div>
       </a>
 
-      <div class="project-card">
-        <div class="project-content full-width">
+      <a href="https://github.com/Pabl0l/python" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="project-image">
+          <img src={projectImg4.src} alt="Python Scripts" class="img-normal img-contain" />
+          <img src={projectImg4.src} alt="Python Scripts" class="img-green img-contain" />
+        </div>
+        <div class="project-content">
           <h3 data-i18n="projects.scripts.title">Python Scripts</h3>
           <p data-i18n="projects.scripts.desc">Recopilación de scripts de Python para resolver distintos problemas de automatización y procesamiento de datos.</p>
           <div class="tech-stack">
             <span>Python</span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -131,6 +136,11 @@ import projectImg3Green from '../../assets/images/merge_helper_verde.jpg';
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .project-image img.img-contain {
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: darken background for contained images */
   }
 
   .img-green {
