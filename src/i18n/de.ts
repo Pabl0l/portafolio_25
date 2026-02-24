@@ -156,13 +156,23 @@ export const de = {
     },
     chatbot: {
         placeholder: "Schreib etwas, um mit mir zu sprechen...",
-        default: "Ich bin mir nicht sicher, wie ich darauf antworten soll, aber wie mein Motto sagt: Ich hasse Probleme, also werde ich eine Lösung finden.",
-        greeting: "Hallo! Ich bin Pablos virtueller Assistent. Wie kann ich dir heute helfen?",
-        whoami: "Ich bin Pablo Olivera, Systemtechniker und von Natur aus ein 'Bug-Fixer'. Es ist meine Leidenschaft, technische Probleme eins nach dem anderen zu lösen.",
-        skills: "Ich beherrsche Netzwerke (Cisco), Programmierung (Python, JS, Java) und Hardware-Wartung. Jeder Fehler ist eine Herausforderung!",
-        contact: "Du kannst mich per E-Mail unter jpom1310@gmail.com erreichen oder mich auf LinkedIn und GitHub als Pabl0l finden.",
-        experience: "Derzeit bin ich Systemtechniker bei Mired IPS und zuständig für Support, Netzwerke und Infrastrukturwartung.",
-        certifications: "Ich besitze mehrere Cisco-Zertifizierungen in den Bereichen Netzwerke und Cybersicherheit, einschließlich CCNA: Switching, Routing and Wireless.",
-        motto: "Mein Motto lautet: 'i hate problems so i will fix them one by one'. Das ist es, was meine tägliche Arbeit antreibt."
+        default: [
+            "Ich bin mir nicht sicher, wie ich darauf antworten soll, aber wie mein Motto sagt: Ich hasse Probleme, also werde ich eine Lösung finden.",
+            "Gute Frage, ich werde sie speichern, damit Pablo sie später beantworten kann.",
+            "Systemfehler: Informationen nicht verarbeitet. Pablo wird es mir später erklären.",
+            "Interessant... ich werde es eines Tages in meine persönliche Datenbank aufnehmen."
+        ],
+        greeting: "Hallo! Ich bin Pablos virtueller Assistent. Wie kann ich dir heute helfen, o welchen Fehler werden wir heute beheben?",
+        whoami: "Ich bin Pablo Olivera, Systemtechniker und von Natur aus ein 'Bug-Fixer'. Im Grunde gilt: Wenn es ein Kabel oder Code hat und kaputt ist, bin ich dein Mann.",
+        skills: "Ich beherrsche Netzwerke (Cisco), Programmierung (Python, JS, Java) und Hardware-Wartung. Wenn das System schlecht gemacht ist, fängt es an mich zu nerven...",
+        contact: "Du kannst mich per E-Mail unter jpom1310@gmail.com erreichen oder mich auf LinkedIn und GitHub als Pabl0l finden. Bitte keine Rauchsignale senden, die ignoriere ich meistens.",
+        experience: "Derzeit bin ich Systemtechniker bei Mired IPS. Einmal habe ich das Internet eines ganzen Büros in 5 Minuten repariert, nur weil ein paar Genies das RACK ausgesteckt hatten, um die Wand zu streichen. So ist das Leben.",
+        certifications: "Ich besitze mehrere Cisco-Zertifizierungen. Ich weiß, wie man einen Router konfiguriert und warum man den Maler nicht an das RACK-Netzteil lassen sollte.",
+        motto: "Mein Motto lautet: 'i hate problems so i will fix them one by one'. Das ist es, was meine tägliche Arbeit und meine Verachtung für unsauberen Code antreibt.",
+        tools: "Gib mir ein Schweizer Taschenmesser und ich repariere die Welt. Das war es, was Archimedes meinte, aber er hatte kein Victorinox zur Hand.",
+        music: "Ich bin ein totaler Musikliebhaber. Rock, Metal, Jazz, Dancehall, Electropop... wenn es gut klingt, ist es auf meiner Playlist.",
+        bikes: "Motorräder sind meine Leidenschaft. Es geht nichts über die Freiheit auf zwei Rädern, um den Kopf nach einem Tag voller Bugs frei zu bekommen.",
+        hates: "Schlecht gemachte Programme und Systeme nerven mich zutiefst. Effizienz ist keine Option, sondern eine Notwendigkeit.",
+        family: "Mein Lieblingsort auf der Welt ist einfach: dort, wo meine Familie und meine Freunde sind."
     }
 };

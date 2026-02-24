@@ -156,13 +156,23 @@ export const es = {
     },
     chatbot: {
         placeholder: "Escribe algo para hablar conmigo...",
-        default: "No estoy seguro de cómo responder a eso, pero como dice mi lema: odio los problemas, así que buscaré una solución.",
-        greeting: "¡Hola! Soy el asistente virtual de Pablo. ¿En qué puedo ayudarte hoy?",
-        whoami: "Soy Pablo Olivera, técnico en sistemas y 'bug fixer' por naturaleza. Me apasiona resolver problemas técnicos uno a uno.",
-        skills: "Domino redes (Cisco), programación (Python, JS, Java) y mantenimiento de hardware. ¡Cualquier fallo es un reto!",
-        contact: "Puedes contactarme por email en jpom1310@gmail.com o encontrarme en LinkedIn y GitHub como Pabl0l.",
-        experience: "Actualmente soy Técnico en Mired IPS, donde me encargo del soporte, redes y mantenimiento de infraestructura informática.",
-        certifications: "Tengo varias certificaciones de Cisco en Redes y Ciberseguridad, incluyendo CCNA: Switching, Routing and Wireless.",
-        motto: "Mi lema es: 'i hate problems so i will fix them one by one'. Es lo que guía mi trabajo diario."
+        default: [
+            "No estoy seguro de cómo responder a eso, pero como dice mi lema: odio los problemas, así que buscaré una solución.",
+            "Buena pregunta, la guardaré para que Pablo la responda más tarde.",
+            "System Error: No tengo esa info procesada. Pablo me lo explicará luego.",
+            "Interesante... lo añadiré a mi base de datos personalizada algún día."
+        ],
+        greeting: "¡Hola! Soy el asistente virtual de Pablo. ¿En qué puedo ayudarte hoy o qué fallo vamos a depurar?",
+        whoami: "Soy Pablo Olivera, técnico en sistemas y 'bug fixer' por naturaleza. Básicamente, si tiene un cable o código y está roto, soy tu hombre.",
+        skills: "Domino redes (Cisco), programación (Python, JS, Java) y mantenimiento de hardware. Si el sistema está mal hecho, ya me está empezando a molestar...",
+        contact: "Puedes contactarme por email en jpom1310@gmail.com o encontrarme en LinkedIn y GitHub como Pabl0l. No mandes señales de humo, suelo ignorarlas.",
+        experience: "Actualmente soy Técnico en Mired IPS. Una vez arreglé el internet de toda una oficina en 5 minutos solo porque unos genios desconectaron el RACK para pintar la pared. Cosas de la vida.",
+        certifications: "Tengo varias certificaciones de Cisco. Sé cómo configurar un router y por qué no deberías dejar que el pintor toque los cables del RACK.",
+        motto: "Mi lema es: 'i hate problems so i will fix them one by one'. Es lo que guía mi trabajo diario y mi desprecio por el código sucio.",
+        tools: "Dame una navaja suiza y arreglaré el mundo. Fue lo que Arquímedes quiso decir, pero no tenía una Victorinox a mano.",
+        music: "Soy un melómano total. Rock, metal, jazz, dance hall, electropop... si suena bien, está en mi playlist.",
+        bikes: "Las motos son mi pasión. Nada como la libertad de las dos ruedas para despejar la mente después de un día de bugs.",
+        hates: "Me molestan profundamente los programas y sistemas mal hechos. La eficiencia no es una opción, es una necesidad.",
+        family: "Mi lugar favorito en el mundo es simple: donde estén mi familia y mis amigos."
     }
 };

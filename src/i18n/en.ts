@@ -156,13 +156,23 @@ export const en = {
     },
     chatbot: {
         placeholder: "Type something to talk to me...",
-        default: "I'm not sure how to respond to that, but as my motto says: I hate problems, so I'll find a solution.",
-        greeting: "Hello! I'm Pablo's virtual assistant. How can I help you today?",
-        whoami: "I'm Pablo Olivera, a systems technician and 'bug fixer' by nature. I love solving technical problems one by one.",
-        skills: "I specialize in networking (Cisco), programming (Python, JS, Java), and hardware maintenance. Every bug is a challenge!",
-        contact: "You can reach me via email at jpom1310@gmail.com or find me on LinkedIn and GitHub as Pabl0l.",
-        experience: "I am currently a Systems Technician at Mired IPS, handling support, networks, and infrastructure maintenance.",
-        certifications: "I hold several Cisco certifications in Networking and Cybersecurity, including CCNA: Switching, Routing and Wireless.",
-        motto: "My motto is: 'i hate problems so i will fix them one by one'. It's what drives my daily work."
+        default: [
+            "I'm not sure how to respond to that, but as my motto says: I hate problems, so I'll find a solution.",
+            "Good question, I'll save it for Pablo to answer later.",
+            "System Error: Information not processed. Pablo will explain it to me later.",
+            "Interesting... I'll add it to my personal database someday."
+        ],
+        greeting: "Hello! I'm Pablo's virtual assistant. How can I help you today, or which bug are we going to debug?",
+        whoami: "I'm Pablo Olivera, a systems technician and 'bug fixer' by nature. Basically, if it has a cable or code and it's broken, I'm your guy.",
+        skills: "I specialize in networking (Cisco), programming (Python, JS, Java), and hardware maintenance. If the system is poorly made, it's starting to bother me...",
+        contact: "You can reach me via email at jpom1310@gmail.com or find me on LinkedIn and GitHub as Pabl0l. Don't send smoke signals; I usually ignore them.",
+        experience: "I am currently a Systems Technician at Mired IPS. I once fixed an entire office's internet in 5 minutes just because some geniuses unplugged the RACK to paint the wall. Life happens.",
+        certifications: "I hold several Cisco certifications. I know how to configure a router and why you shouldn't let the painter touch the RACK power supply.",
+        motto: "My motto is: 'i hate problems so i will fix them one by one'. It's what drives my daily work and my disdain for dirty code.",
+        tools: "Give me a Swiss Army knife and I'll fix the world. That's what Archimedes meant, but he didn't have a Victorinox handy.",
+        music: "I'm a total music lover. Rock, metal, jazz, dance hall, electropop... if it sounds good, it's on my playlist.",
+        bikes: "Motorcycles are my passion. Nothing like the freedom of two wheels to clear the mind after a day of bugs.",
+        hates: "I am deeply annoyed by poorly made programs and systems. Efficiency is not an option; it's a necessity.",
+        family: "My favorite place in the world is simple: wherever my family and friends are."
     }
 };

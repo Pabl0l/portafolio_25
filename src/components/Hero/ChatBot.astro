@@ -168,7 +168,7 @@ import { languages, defaultLang, type Language } from '../../i18n';
       const lang = getLang();
       const t = languages[lang].chatbot;
       
-      let response = t.default;
+      let response = "";
 
       // Simple keyword matching
       if (query.match(/hola|saludo|buenos dias|hi|hello/)) {
@@ -185,6 +185,20 @@ import { languages, defaultLang, type Language } from '../../i18n';
         response = t.certifications;
       } else if (query.match(/problema|lema|motto/)) {
         response = t.motto;
+      } else if (query.match(/herramienta|navaja|tool|victorinox/)) {
+        response = t.tools;
+      } else if (query.match(/musica|playlist|melomano|rock|metal|jazz/)) {
+        response = t.music;
+      } else if (query.match(/moto|bike|rueda/)) {
+        response = t.bikes;
+      } else if (query.match(/odias|molesta|mal hecho|hate/)) {
+        response = t.hates;
+      } else if (query.match(/familia|amigo|donde vive/)) {
+        response = t.family;
+      } else {
+        // Randomized fallback
+        const defaults = Array.isArray(t.default) ? t.default : [t.default];
+        response = defaults[Math.floor(Math.random() * defaults.length)];
       }
 
       showResponse(response);
@@ -194,13 +208,10 @@ import { languages, defaultLang, type Language } from '../../i18n';
 
   function showResponse(text: string) {
     if (responseText && responseContainer) {
-      // Clear previous timeout
       if (responseTimeout) clearTimeout(responseTimeout);
-
       responseText.textContent = '';
       responseContainer.classList.remove('hidden');
 
-      // Typing effect
       let i = 0;
       const typeEffect = setInterval(() => {
         if (i < text.length) {
@@ -208,7 +219,6 @@ import { languages, defaultLang, type Language } from '../../i18n';
           i++;
         } else {
           clearInterval(typeEffect);
-          // Auto hide after 5 seconds
           responseTimeout = setTimeout(() => {
             responseContainer.classList.add('hidden');
           }, 5000);
@@ -217,5 +227,14 @@ import { languages, defaultLang, type Language } from '../../i18n';
     }
   }
 
+  function updatePlaceholder() {
+    const lang = getLang();
+    if (chatInput) {
+      chatInput.placeholder = languages[lang].chatbot.placeholder;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updatePlaceholder);
+  window.addEventListener('languageChanged', updatePlaceholder);
   chatInput?.addEventListener('keydown', handleChat);
 </script>
