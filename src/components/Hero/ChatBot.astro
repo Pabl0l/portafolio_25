@@ -195,6 +195,14 @@ import { languages, defaultLang, type Language } from '../../i18n';
         response = t.hates;
       } else if (query.match(/familia|amigo|donde vive/)) {
         response = t.family;
+      } else if (query.match(/como estas|cómo estás|how are you|wie geht es/)) {
+        response = t.status;
+      } else if (query.match(/pelicula|película|cine|movie|film/)) {
+        response = t.movies;
+      } else if (query.match(/comida|hambre|food|hungry|essen/)) {
+        response = t.food;
+      } else if (query.match(/hobby|pasatiempo|ocio|lol|minecraft|isaac|juego|game|ejercicio|viajar|naturaleza|nature|color/)) {
+        response = t.hobbies;
       } else {
         // Randomized fallback
         const defaults = Array.isArray(t.default) ? t.default : [t.default];

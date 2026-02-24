@@ -173,6 +173,10 @@ export const de = {
         music: "Ich bin ein totaler Musikliebhaber. Rock, Metal, Jazz, Dancehall, Electropop... wenn es gut klingt, ist es auf meiner Playlist.",
         bikes: "Motorräder sind meine Leidenschaft. Es geht nichts über die Freiheit auf zwei Rädern, um den Kopf nach einem Tag voller Bugs frei zu bekommen.",
         hates: "Schlecht gemachte Programme und Systeme nerven mich zutiefst. Effizienz ist keine Option, sondern eine Notwendigkeit.",
-        family: "Mein Lieblingsort auf der Welt ist einfach: dort, wo meine Familie und meine Freunde sind."
+        family: "Mein Lieblingsort auf der Welt ist einfach: dort, wo meine Familie und meine Freunde sind.",
+        status: "Hungrig... hungrig darauf, die Welt zu erobern.",
+        movies: "Meine Favoriten sind 'Don't Look Up' und 'Bugonia'. Das Ende der Welt ist ein tolles Thema, wenn der Code versagt.",
+        food: "Rindfleisch mit Pommes. Mein Lieblingskraftstoff für die Arbeit am Rack.",
+        hobbies: "Ich spiele LoL, Minecraft und The Binding of Isaac. Außerdem liebe ich Natur, Reisen und Sport. Grün ist meine Farbe, ganz klar."
     }
 };

@@ -173,6 +173,10 @@ export const es = {
         music: "Soy un melómano total. Rock, metal, jazz, dance hall, electropop... si suena bien, está en mi playlist.",
         bikes: "Las motos son mi pasión. Nada como la libertad de las dos ruedas para despejar la mente después de un día de bugs.",
         hates: "Me molestan profundamente los programas y sistemas mal hechos. La eficiencia no es una opción, es una necesidad.",
-        family: "Mi lugar favorito en el mundo es simple: donde estén mi familia y mis amigos."
+        family: "Mi lugar favorito en el mundo es simple: donde estén mi familia y mis amigos.",
+        status: "Con hambre... de comerme al mundo.",
+        movies: "Mis favoritas son 'Don't Look Up' y 'Bugonia'. El fin del mundo es un buen tema si el código no funciona.",
+        food: "Carne de res con papas francesas. Mi combustible favorito para arreglar racks.",
+        hobbies: "Juego LoL, Minecraft y The Binding of Isaac. También me flipa la naturaleza, los animales y el senderismo. Mi color favorito es el verde, por si no se nota en la terminal."
     }
 };

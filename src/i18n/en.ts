@@ -173,6 +173,10 @@ export const en = {
         music: "I'm a total music lover. Rock, metal, jazz, dance hall, electropop... if it sounds good, it's on my playlist.",
         bikes: "Motorcycles are my passion. Nothing like the freedom of two wheels to clear the mind after a day of bugs.",
         hates: "I am deeply annoyed by poorly made programs and systems. Efficiency is not an option; it's a necessity.",
-        family: "My favorite place in the world is simple: wherever my family and friends are."
+        family: "My favorite place in the world is simple: wherever my family and friends are.",
+        status: "Hungry... hungry to take over the world.",
+        movies: "My favorites are 'Don't Look Up' and 'Bugonia'. World's end is a great topic if the code is failing.",
+        food: "Beef with french fries. My favorite fuel for fixing racks.",
+        hobbies: "I play LoL, Minecraft, and The Binding of Isaac. I also love nature, travel, and working out. Green is my color, obviously."
     }
 };
