@@ -33,7 +33,7 @@ Técnico en sistemas con habilidades en creación, reparación y mantenimiento d
 - Certificaciones en Cisco sobre ciberseguridad y redes.
 
 ## 5. Experiencia Profesional
-**Cargo:** Practicante Técnico en Mantenimiento y Reparación de Sistemas Informáticos
+**Cargo:**  Técnico en Mantenimiento y Reparación de Sistemas Informáticos
 **Empresa:** Mired IPS
 **Inicio:** 28/10/2025
 **Funciones:**

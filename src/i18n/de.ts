@@ -21,7 +21,8 @@ export const de = {
             bugHunter: "Jäger von Systemfehlern",
             mercenary: "Söldner für digitale Verteidigung und Risikominimierung",
             exterminator: "Vernichter kritischer Netzwerkfehler",
-            fullstackWorker: "Fullstack-Baumeister für Webseitenerstellung"
+            fullstackWorker: "Fullstack-Baumeister für Webseitenerstellung",
+            entrenador: "Personalisierter Coach für Datensicherheit"
         }
     },
     skills: {
@@ -31,7 +32,7 @@ export const de = {
         objective: "$ cat profile.txt",
         objectiveText: "Techniker für Computersysteme mit Fähigkeiten in Hardware-Reparatur, Wartung und Softwareentwicklung. Praxiserfahrung in Webentwicklung, Konfiguration von Netzwerkgeräten (Switches/Routern) und technischem Support vor Ort. Ausgeprägte Soft Skills durch meine Tätigkeit als akademischer Tutor.",
         whatAmI: "Was bin ich also?",
-        descartesQuote: "„Was bin ich also? Ein Ding, das denkt. Und was ist ein Ding, das denkt? Ein Ding, das zweifelt, versteht, bejaht, verneint, will, nicht will, sich vorstellt und empfindet.“",
+        descartesQuote: "„Was bin ich also? Ein Ding, das denkt. Und what ist ein Ding, das denkt? Ein Ding, das zweifelt, versteht, bejaht, verneint, will, nicht will, sich vorstellt und empfindet.“",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
         categories: {
             webDev: "Webentwicklung",
@@ -69,7 +70,8 @@ export const de = {
                 "PC-Formatierung, Betriebssysteminstallation und Erstellung von Backups",
                 "LAN-Konfiguration und Wartung von Switches/Routern",
                 "Technischer Support für interne Nutzer",
-                "Wartung von IP-Druckern"
+                "Wartung von IP-Druckern",
+                "Geräte allein durch meine bloße Anwesenheit reparieren"
             ]
         }
     },
@@ -83,6 +85,12 @@ export const de = {
     certifications: {
         title: "// Zertifizierungen",
         provider: "Cisco Networking Academy",
+        categories: {
+            hardware: "Hardware und Software",
+            networks: "Netzwerke",
+            cybersecurity: "Cybersicherheit",
+            devdata: "Programmierung und Datenwissenschaft"
+        },
         certs: {
             ccna: {
                 name: "CCNA: Switching, Routing and Wireless Essentials",
@@ -115,6 +123,34 @@ export const de = {
             awareness: {
                 name: "Digital Awareness",
                 date: "10. März 2025"
+            },
+            python1: {
+                name: "Python-Grundlagen 1",
+                date: "27. Dez. 2025"
+            },
+            python2: {
+                name: "Python-Grundlagen 2",
+                date: "26. Jan. 2026"
+            },
+            hardware_basics: {
+                name: "Grundkonzepte der Computer-Hardware",
+                date: "06. Jan. 2026"
+            },
+            hardware_support: {
+                name: "Hardware- und Upgrade-Support",
+                date: "20. Jan. 2026"
+            },
+            it_support: {
+                name: "Grundlagen des IT-Kundensupports",
+                date: "28. Jan. 2026"
+            },
+            modern_ai: {
+                name: "Einführung in moderne KI",
+                date: "10. Feb. 2026"
+            },
+            data_science: {
+                name: "Einführung in die Datenwissenschaft",
+                date: "17. Feb. 2026"
             }
         }
     }

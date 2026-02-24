@@ -21,7 +21,8 @@ export const en = {
             bugHunter: "System Error Hunter",
             mercenary: "Mercenary Specialized in Digital Defense and Risk Mitigation",
             exterminator: "Network Failure Exterminator",
-            fullstackWorker: "Full-Stack Builder for Website Construction"
+            fullstackWorker: "Full-Stack Builder for Website Construction",
+            entrenador: "Personal Security Coach for Data Security"
         }
     },
     skills: {
@@ -69,7 +70,8 @@ export const en = {
                 "PC formatting, operating system installation, and backup creation",
                 "LAN network configuration and switch/router maintenance",
                 "Technical support for internal users",
-                "IP printer maintenance"
+                "IP printer maintenance",
+                "Fixing devices with just my presence"
             ]
         }
     },
@@ -83,6 +85,12 @@ export const en = {
     certifications: {
         title: "// Certifications",
         provider: "Cisco Networking Academy",
+        categories: {
+            hardware: "Hardware and Software",
+            networks: "Networking",
+            cybersecurity: "Cybersecurity",
+            devdata: "Programming and Data Science"
+        },
         certs: {
             ccna: {
                 name: "CCNA: Switching, Routing, and Wireless Essentials",
@@ -115,6 +123,34 @@ export const en = {
             awareness: {
                 name: "Digital Awareness",
                 date: "10 Mar 2025"
+            },
+            python1: {
+                name: "Python Essentials 1",
+                date: "27 Dec 2025"
+            },
+            python2: {
+                name: "Python Essentials 2",
+                date: "26 Jan 2026"
+            },
+            hardware_basics: {
+                name: "Computer Hardware Basics",
+                date: "06 Jan 2026"
+            },
+            hardware_support: {
+                name: "Hardware and Upgrade Support",
+                date: "20 Jan 2026"
+            },
+            it_support: {
+                name: "IT Customer Support Basics",
+                date: "28 Jan 2026"
+            },
+            modern_ai: {
+                name: "Introduction to Modern AI",
+                date: "10 Feb 2026"
+            },
+            data_science: {
+                name: "Introduction to Data Science",
+                date: "17 Feb 2026"
             }
         }
     }

@@ -21,7 +21,8 @@ export const es = {
             bugHunter: "Cazador de Errores, Bugs y Fallos de Sistema",
             mercenary: "Mercenario Especializado en Defensa Digital y Mitigación de Riesgos",
             exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos",
-            fullstackWorker: "Obrero Fullstack para la construcción de sitios web"
+            fullstackWorker: "Obrero Fullstack para la construcción de sitios web",
+            entrenador: "Entrenador personal para la seguridad de datos"
         }
     },
     skills: {
@@ -62,14 +63,15 @@ export const es = {
     experience: {
         title: "// Experiencia",
         mired: {
-            position: "Practicante Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
+            position: " Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
             date: "28/10/2025 - Presente",
             responsibilities: [
                 "Instalación y reparación física de equipos",
                 "Formateo de PC, instalación de sistema operativo, creación de copias de seguridad",
                 "Configuración de redes LAN y mantenimiento de switches/routers",
                 "Soporte técnico a usuarios internos",
-                "Mantenimiento de impresoras IP"
+                "Mantenimiento de impresoras IP",
+                "Arreglar dispositivos con solo mi presencia"
             ]
         }
     },
@@ -83,6 +85,12 @@ export const es = {
     certifications: {
         title: "// Certificaciones",
         provider: "Cisco Networking Academy",
+        categories: {
+            hardware: "Hardware y Software",
+            networks: "Redes",
+            cybersecurity: "Ciberseguridad",
+            devdata: "Programación y Ciencia de Datos"
+        },
         certs: {
             ccna: {
                 name: "CCNA: Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas",
@@ -115,6 +123,34 @@ export const es = {
             awareness: {
                 name: "Conciencia digital",
                 date: "10 mar 2025"
+            },
+            python1: {
+                name: "Fundamentos de Python 1",
+                date: "27 dic 2025"
+            },
+            python2: {
+                name: "Fundamentos de Python 2",
+                date: "26 ene 2026"
+            },
+            hardware_basics: {
+                name: "Conceptos Básicos de Hardware de Computadora",
+                date: "06 ene 2026"
+            },
+            hardware_support: {
+                name: "Hardware and Upgrade Support",
+                date: "20 ene 2026"
+            },
+            it_support: {
+                name: "IT Customer Support Basics",
+                date: "28 ene 2026"
+            },
+            modern_ai: {
+                name: "Introducción a la IA moderna",
+                date: "10 feb 2026"
+            },
+            data_science: {
+                name: "Introducción a la Ciencia de Datos",
+                date: "17 feb 2026"
             }
         }
     }
