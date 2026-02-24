@@ -170,46 +170,51 @@ import { languages, defaultLang, type Language } from '../../i18n';
       const cleanQuery = query.replace(/[¿?¡!.,]/g, '').trim();
       
       const intents = [
-        { key: 'greeting', keywords: ['hola', 'buenos dias', 'buenas tardes', 'buenas noches', 'saludos', 'hi', 'hello', 'hey', 'que tal', 'hablar'] },
-        { key: 'whoami', keywords: ['quien eres', 'quién eres', 'tu nombre', 'quien es pablo', 'quién es pablo', 'sobre ti', 'quien sos'] },
-        { key: 'skills', keywords: ['habilidades', 'que sabes hacer', 'qué sabes hacer', 'tus conocimientos', 'tu stack', 'tecnologias', 'programacion', 'redes cisco', 'python', 'java', 'javascript', 'mantenimiento pc'] },
-        { key: 'contact', keywords: ['contacto', 'email', 'correo', 'escribirte', 'tu linkedin', 'tu github', 'redes sociales'] },
-        { key: 'experience', keywords: ['experiencia', 'donde has trabajado', 'donde trabajas', 'tu trabajo', 'trayectoria laboral', 'mired ips'] },
-        { key: 'certifications', keywords: ['certificados', 'estudios', 'educacion', 'cisco networking', 'ccna', 'tu titulo', 'formacion'] },
-        { key: 'motto', keywords: ['tu lema', 'tu frase', 'filosofia', 'filosofía', 'motto'] },
-        { key: 'tools', keywords: ['herramientas', 'navaja suiza', 'victorinox', 'que llevas siempre', 'arquimedes'] },
-        { key: 'music', keywords: ['musica', 'qué música escuchas', 'playlist', 'melomano', 'rock', 'metal', 'jazz'] },
-        { key: 'bikes', keywords: ['motos', 'tu moto', 'dos ruedas', 'rodar'] },
-        { key: 'hates', keywords: ['que te molesta', 'que odias', 'sistemas mal hechos', 'eficiencia'] },
-        { key: 'family', keywords: ['tu familia', 'tus amigos', 'seres queridos', 'donde vive tu familia', 'con quien vives'] },
-        { key: 'status', keywords: ['como estas', 'cómo estás', 'todo bien', 'como vas', 'qué haces', 'que haces'] },
-        { key: 'movies', keywords: ['peliculas', 'películas', 'cine', 'don\'t look up', 'bugonia', 'recomienda una peli'] },
-        { key: 'food', keywords: ['comida favorita', 'que comes', 'que te gusta comer', 'hambre', 'carne con papas'] },
-        { key: 'hobbies', keywords: ['hobbies', 'pasatiempos', 'que haces en tu tiempo libre', 'lol', 'minecraft', 'the binding of isaac', 'ejercicio', 'naturaleza'] },
-        { key: 'philosophy', keywords: ['navaja suiza', 'aprender', 'si no se lo aprendo', 'no puedo', 'tu especialidad'] },
-        { key: 'goals', keywords: ['metas', 'objetivos', 'mejor zapatero', 'aspiraciones', 'futuro'] },
-        { key: 'teamwork', keywords: ['trabajo en equipo', 'horizontal', 'liderazgo', 'sumision'] },
-        { key: 'location', keywords: ['donde eres', 'de donde vienes', 'donde vives', 'donde estas', 'ubicacion', 'arauca', 'barranquilla'] },
-        { key: 'failure', keywords: ['fracaso', 'aprendizaje', 'errores', 'fallar'] },
-        { key: 'favTech', keywords: ['python en mi bota', 'toy story', 'serpiente'] },
-        { key: 'joke', keywords: ['chiste', 'algo gracioso', 'broma'] }
+        { key: 'greeting', keywords: ['hola', 'buenos dias', 'buenas tardes', 'buenas noches', 'saludos', 'hi', 'hello', 'hey', 'que tal', 'hablar', 'buen dia'] },
+        { key: 'whoami', keywords: ['quien eres', 'quién eres', 'tu nombre', 'quien es pablo', 'quién es pablo', 'sobre ti', 'quien sos', 'biografia', 'quien es este'] },
+        { key: 'skills', keywords: ['habilidades', 'que sabes hacer', 'qué sabes hacer', 'tus conocimientos', 'tu stack', 'tecnologias', 'programacion', 'redes cisco', 'python', 'java', 'javascript', 'mantenimiento pc', 'sabes de', 'skill', 'stacks', 'herramientas de programacion'] },
+        { key: 'contact', keywords: ['contacto', 'email', 'correo', 'escribirte', 'tu linkedin', 'tu github', 'redes sociales', 'escribirle', 'contactame', 'hablar con pablo'] },
+        { key: 'experience', keywords: ['experiencia', 'donde has trabajado', 'donde trabajas', 'tu trabajo', 'trayectoria laboral', 'mired ips', 'empresa', 'chamba', 'oficio', 'laburo'] },
+        { key: 'certifications', keywords: ['certificados', 'estudios', 'educacion', 'cisco networking', 'ccna', 'tu titulo', 'formacion', 'universidad', 'estudiado', 'academico', 'diploma'] },
+        { key: 'motto', keywords: ['tu lema', 'tu frase', 'filosofia', 'filosofía', 'motto', 'pensamiento', 'lema'] },
+        { key: 'tools', keywords: ['herramientas', 'navaja suiza', 'victorinox', 'que llevas siempre', 'arquimedes', 'multiherramienta'] },
+        { key: 'music', keywords: ['musica', 'qué música escuchas', 'playlist', 'melomano', 'rock', 'metal', 'jazz', 'lo que escuchas', 'audifonos'] },
+        { key: 'bikes', keywords: ['motos', 'tu moto', 'dos ruedas', 'rodar', 'motocicleta', 'alto cilindraje', 'motero'] },
+        { key: 'hates', keywords: ['que te molesta', 'que odias', 'sistemas mal hechos', 'eficiencia', 'rabia', 'disgusto'] },
+        { key: 'family', keywords: ['tu familia', 'tus amigos', 'seres queridos', 'donde vive tu familia', 'con quien vives', 'padres', 'hermanos'] },
+        { key: 'status', keywords: ['como estas', 'cómo estás', 'todo bien', 'como vas', 'qué haces', 'que haces', 'como andas', 'como va todo'] },
+        { key: 'movies', keywords: ['peliculas', 'películas', 'cine', 'don\'t look up', 'bugonia', 'recomienda una peli', 'pelicula', 'película', 'que pelis ves'] },
+        { key: 'food', keywords: ['comida favorita', 'que comes', 'que te gusta comer', 'hambre', 'carne con papas', 'comida', 'plato favorito', 'cenar', 'almorzar'] },
+        { key: 'hobbies', keywords: ['hobbies', 'pasatiempos', 'que haces en tu tiempo libre', 'lol', 'minecraft', 'the binding of isaac', 'ejercicio', 'naturaleza', 'hobby', 'gaming', 'juegos', 'videojuegos', 'color', 'favorito', 'que te gusta', 'naturaleza', 'animales', 'verde'] },
+        { key: 'philosophy', keywords: ['navaja suiza', 'aprender', 'si no se lo aprendo', 'no puedo', 'tu especialidad', 'especial', 'aprender rapido'] },
+        { key: 'goals', keywords: ['metas', 'objetivos', 'mejor zapatero', 'aspiraciones', 'futuro', 'donde te ves'] },
+        { key: 'teamwork', keywords: ['trabajo en equipo', 'horizontal', 'liderazgo', 'sumision', 'colaborar', 'grupal'] },
+        { key: 'location', keywords: ['donde eres', 'de donde vienes', 'donde vives', 'donde estas', 'ubicacion', 'arauca', 'barranquilla', 'lugar', 'resides', 'procedencia', 'ubicación', 'donde estas basado'] },
+        { key: 'failure', keywords: ['fracaso', 'aprendizaje', 'errores', 'fallar', 'perder', 'equivocarse'] },
+        { key: 'favTech', keywords: ['python en mi bota', 'toy story', 'serpiente', 'python en la bota'] },
+        { key: 'joke', keywords: ['chiste', 'algo gracioso', 'broma', 'risas'] }
       ];
 
       let bestMatch = { key: 'default', score: 0 };
 
-      // Improved Scoring logic
+      // Improved Scoring logic v2
       intents.forEach(intent => {
         let score = 0;
         intent.keywords.forEach(kw => {
-          // Use regex for whole word or phrase matching
-          const regex = new RegExp(`\\b${kw}\\b`, 'i');
-          if (regex.test(cleanQuery)) {
-            // Score weighted by keyword length (longer = more specific)
+          // 1. Exact phrase/word boundary match (Highest weight)
+          const exactRegex = new RegExp(`\\b${kw}\\b`, 'i');
+          if (exactRegex.test(cleanQuery)) {
+            score += kw.length * 2;
+          } 
+          // 2. Contains match (Lower weight, but helps with plurals or partials)
+          else if (cleanQuery.includes(kw)) {
             score += kw.length;
-            // Bonus for exact field match
-            if (cleanQuery === kw) score += 10;
           }
+          
+          // Bonus for absolute match
+          if (cleanQuery === kw) score += 20;
         });
+
         if (score > bestMatch.score) {
           bestMatch = { key: intent.key, score };
         }
