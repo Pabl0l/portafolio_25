@@ -167,59 +167,55 @@ import { languages, defaultLang, type Language } from '../../i18n';
       const lang = getLang();
       const t = languages[lang].chatbot;
       
-      let response = "";
+      const intents = [
+        { key: 'greeting', keywords: ['hola', 'saludo', 'buenas', 'hi', 'hello', 'hey', 'qué tal', 'que tal', 'hablar'] },
+        { key: 'whoami', keywords: ['quien', 'quién', 'pablo', 'perfil', 'who', 'eres', 'identidad', 'persona', 'creador'] },
+        { key: 'skills', keywords: ['habilidad', 'sabes', 'haces', 'conocimiento', 'skill', 'stack', 'tecnologia', 'programar', 'redes', 'cisco', 'python', 'java', 'js', 'hardware', 'mantenimiento'] },
+        { key: 'contact', keywords: ['contacto', 'email', 'correo', 'redes', 'social', 'linkedin', 'github', 'escribir', 'ubicar', 'localizar', 'mensaje'] },
+        { key: 'experience', keywords: ['experiencia', 'trabajo', 'mired', 'oficio', 'chamba', 'laboral', 'trayectoria', 'puesto', 'cargo'] },
+        { key: 'certifications', keywords: ['certificado', 'cisco', 'ccna', 'estudio', 'educacion', 'título', 'titulo', 'estudió', 'estudio', 'universidad', 'formacion'] },
+        { key: 'motto', keywords: ['problema', 'lema', 'motto', 'frase', 'filosofia', 'filosofía', 'guía', 'principio'] },
+        { key: 'tools', keywords: ['herramienta', 'navaja', 'tool', 'victorinox', 'arquimedes', 'suiza', 'siempre cargo'] },
+        { key: 'music', keywords: ['musica', 'playlist', 'melomano', 'rock', 'metal', 'jazz', 'dance hall', 'electropop', 'sonar', 'cancion'] },
+        { key: 'bikes', keywords: ['moto', 'bike', 'rueda', 'libertad', 'conducir', 'rodar', 'motor'] },
+        { key: 'hates', keywords: ['odias', 'molesta', 'mal hecho', 'hate', 'rabia', 'disgusto', 'eficiencia'] },
+        { key: 'family', keywords: ['familia', 'amigo', 'donde vive', 'casa', 'hogar', 'queridos'] },
+        { key: 'status', keywords: ['como estas', 'cómo estás', 'how are you', 'que haces', 'bien o que', 'todo bien', 'tal vas', 'hambre', 'comerte al mundo'] },
+        { key: 'movies', keywords: ['pelicula', 'película', 'cine', 'movie', 'film', 'ver', 'don\'t look up', 'dont look up', 'bugonia', 'recomendar'] },
+        { key: 'food', keywords: ['comida', 'hambre', 'food', 'hungry', 'essen', 'comer', 'carne', 'papas', 'francesas', 'almuerzo', 'cena'] },
+        { key: 'hobbies', keywords: ['hobby', 'pasatiempo', 'ocio', 'lol', 'minecraft', 'isaac', 'juego', 'game', 'ejercicio', 'viajar', 'naturaleza', 'nature', 'color', 'verde', 'entrenar', 'gym', 'silvestre'] },
+        { key: 'philosophy', keywords: ['especial', 'aprende', 'puedo', 'capaz', 'special', 'philosophy', 'limitado', 'sabes de todo', 'aprender'] },
+        { key: 'goals', keywords: ['meta', 'objetivo', 'futuro', 'goal', 'target', 'aspiracion', 'crecer', 'mejor zapatero', 'llegar'] },
+        { key: 'teamwork', keywords: ['equipo', 'horizontal', 'comun', 'team', 'trabajar con otros', 'lider', 'compañero'] },
+        { key: 'location', keywords: ['donde eres', 'arauca', 'barranquilla', 'donde estas', 'vivir', 'live', 'base', 'ciudad', 'ubicacion', 'ubicación'] },
+        { key: 'failure', keywords: ['fracaso', 'falla', 'error', 'aprendizaje', 'failure', 'equivocarse', 'perder'] },
+        { key: 'favTech', keywords: ['python', 'serpiente', 'bota', 'toy story', 'woody'] },
+        { key: 'joke', keywords: ['chiste', 'broma', 'gracioso', 'joke', 'reir', 'divertido'] }
+      ];
 
-      // Simple keyword matching
-      if (query.match(/hola|saludo|buenos dias|hi|hello/)) {
-        response = t.greeting;
-      } else if (query.match(/quien|quién|pablo|perfil|who/)) {
-        response = t.whoami;
-      } else if (query.match(/habilidad|sabes|haces|conocimiento|skill|stack|tecnologia/)) {
-        response = t.skills;
-      } else if (query.match(/contacto|email|correo|redes|social|linkedin|github/)) {
-        response = t.contact;
-      } else if (query.match(/experiencia|trabajo|mired|oficio/)) {
-        response = t.experience;
-      } else if (query.match(/certificado|cisco|ccna|estudio|educacion/)) {
-        response = t.certifications;
-      } else if (query.match(/problema|lema|motto/)) {
-        response = t.motto;
-      } else if (query.match(/herramienta|navaja|tool|victorinox/)) {
-        response = t.tools;
-      } else if (query.match(/musica|playlist|melomano|rock|metal|jazz/)) {
-        response = t.music;
-      } else if (query.match(/moto|bike|rueda/)) {
-        response = t.bikes;
-      } else if (query.match(/odias|molesta|mal hecho|hate/)) {
-        response = t.hates;
-      } else if (query.match(/familia|amigo|donde vive/)) {
-        response = t.family;
-      } else if (query.match(/como estas|cómo estás|how are you|wie geht es/)) {
-        response = t.status;
-      } else if (query.match(/pelicula|película|cine|movie|film/)) {
-        response = t.movies;
-      } else if (query.match(/comida|hambre|food|hungry|essen/)) {
-        response = t.food;
-      } else if (query.match(/hobby|pasatiempo|ocio|lol|minecraft|isaac|juego|game|ejercicio|viajar|naturaleza|nature|color/)) {
-        response = t.hobbies;
-      } else if (query.match(/especial|navaja|aprende|puedo|capaz|special|philosophy/)) {
-        response = t.philosophy;
-      } else if (query.match(/meta|objetivo|futuro|goal|target/)) {
-        response = t.goals;
-      } else if (query.match(/equipo|horizontal|comun|team/)) {
-        response = t.teamwork;
-      } else if (query.match(/donde eres|arauca|barranquilla|donde estas|vivir|live|base/)) {
-        response = t.location;
-      } else if (query.match(/fracaso|falla|error|aprendizaje|failure/)) {
-        response = t.failure;
-      } else if (query.match(/python|serpiente/)) {
-        response = t.favTech;
-      } else if (query.match(/chiste|broma|gracioso|joke/)) {
-        response = t.joke;
-      } else {
-        // Randomized fallback
+      let bestMatch = { key: 'default', score: 0 };
+
+      // Scoring logic
+      intents.forEach(intent => {
+        let score = 0;
+        intent.keywords.forEach(kw => {
+          if (query.includes(kw)) {
+            score += 1;
+            // Higher weight for exact matches in short queries
+            if (query === kw) score += 2;
+          }
+        });
+        if (score > bestMatch.score) {
+          bestMatch = { key: intent.key, score };
+        }
+      });
+
+      let response = "";
+      if (bestMatch.key === 'default') {
         const defaults = Array.isArray(t.default) ? t.default : [t.default];
         response = defaults[Math.floor(Math.random() * defaults.length)];
+      } else {
+        response = (t as any)[bestMatch.key];
       }
 
       showResponse(response);
