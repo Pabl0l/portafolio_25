@@ -1,12 +1,16 @@
 ---
 import profileImg from '../../assets/images/retrato.png';
+import ChatBot from './ChatBot.astro';
 ---
 
 <section class="hero" id="top">
   <div class="hero-content">
-    <div class="profile-image-container">
-      <img src={profileImg.src} alt="Juan Pablo Olivera" class="profile-image" />
-      <div class="image-glitch"></div>
+    <div class="profile-column">
+      <div class="profile-image-container">
+        <img src={profileImg.src} alt="Juan Pablo Olivera" class="profile-image" />
+        <div class="image-glitch"></div>
+      </div>
+      <ChatBot />
     </div>
     
     <div class="hero-text">
@@ -80,6 +84,15 @@ import profileImg from '../../assets/images/retrato.png';
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .profile-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 300px;
+    width: 100%;
+    position: relative;
   }
 
   .profile-image-container {

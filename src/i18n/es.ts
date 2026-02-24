@@ -153,5 +153,16 @@ export const es = {
                 date: "17 feb 2026"
             }
         }
+    },
+    chatbot: {
+        placeholder: "Escribe algo para hablar conmigo...",
+        default: "No estoy seguro de cómo responder a eso, pero como dice mi lema: odio los problemas, así que buscaré una solución.",
+        greeting: "¡Hola! Soy el asistente virtual de Pablo. ¿En qué puedo ayudarte hoy?",
+        whoami: "Soy Pablo Olivera, técnico en sistemas y 'bug fixer' por naturaleza. Me apasiona resolver problemas técnicos uno a uno.",
+        skills: "Domino redes (Cisco), programación (Python, JS, Java) y mantenimiento de hardware. ¡Cualquier fallo es un reto!",
+        contact: "Puedes contactarme por email en jpom1310@gmail.com o encontrarme en LinkedIn y GitHub como Pabl0l.",
+        experience: "Actualmente soy Técnico en Mired IPS, donde me encargo del soporte, redes y mantenimiento de infraestructura informática.",
+        certifications: "Tengo varias certificaciones de Cisco en Redes y Ciberseguridad, incluyendo CCNA: Switching, Routing and Wireless.",
+        motto: "Mi lema es: 'i hate problems so i will fix them one by one'. Es lo que guía mi trabajo diario."
     }
 };

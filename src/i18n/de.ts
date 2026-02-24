@@ -153,5 +153,16 @@ export const de = {
                 date: "17. Feb. 2026"
             }
         }
+    },
+    chatbot: {
+        placeholder: "Schreib etwas, um mit mir zu sprechen...",
+        default: "Ich bin mir nicht sicher, wie ich darauf antworten soll, aber wie mein Motto sagt: Ich hasse Probleme, also werde ich eine Lösung finden.",
+        greeting: "Hallo! Ich bin Pablos virtueller Assistent. Wie kann ich dir heute helfen?",
+        whoami: "Ich bin Pablo Olivera, Systemtechniker und von Natur aus ein 'Bug-Fixer'. Es ist meine Leidenschaft, technische Probleme eins nach dem anderen zu lösen.",
+        skills: "Ich beherrsche Netzwerke (Cisco), Programmierung (Python, JS, Java) und Hardware-Wartung. Jeder Fehler ist eine Herausforderung!",
+        contact: "Du kannst mich per E-Mail unter jpom1310@gmail.com erreichen oder mich auf LinkedIn und GitHub als Pabl0l finden.",
+        experience: "Derzeit bin ich Systemtechniker bei Mired IPS und zuständig für Support, Netzwerke und Infrastrukturwartung.",
+        certifications: "Ich besitze mehrere Cisco-Zertifizierungen in den Bereichen Netzwerke und Cybersicherheit, einschließlich CCNA: Switching, Routing and Wireless.",
+        motto: "Mein Motto lautet: 'i hate problems so i will fix them one by one'. Das ist es, was meine tägliche Arbeit antreibt."
     }
 };

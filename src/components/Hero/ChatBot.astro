@@ -1,0 +1,221 @@
+---
+import { languages, defaultLang, type Language } from '../../i18n';
+
+// Import the image (it will be provided by the user)
+// import chatBoxImg from '../../assets/images/cuadro_de_texto.png';
+---
+
+<div class="chatbot-container">
+  <div class="terminal-input-row">
+    <span class="prompt">invitado@pablo:~$</span>
+    <input type="text" id="chat-input" placeholder="..." autocomplete="off" />
+  </div>
+
+  <div id="chat-response-container" class="hidden">
+    <!-- The user will provide cuadro_de_texto.png -->
+    <div class="chat-box">
+      <p id="chat-response-text"></p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .chatbot-container {
+    margin-top: 1.5rem;
+    width: 100%;
+    font-family: var(--font-terminal);
+  }
+
+  .terminal-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--color-matrix-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+  }
+
+  .prompt {
+    color: var(--color-matrix-primary);
+    white-space: nowrap;
+  }
+
+  #chat-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    caret-color: var(--color-matrix-primary);
+  }
+
+  /* Response Box - Now positioned relative to the profile column */
+  #chat-response-container {
+    position: absolute;
+    top: 20px; /* Near the top of the image (head level) */
+    left: calc(100% + 20px); /* To the right of the image */
+    width: 280px;
+    z-index: 1000;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  #chat-response-container.hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+  }
+
+  .chat-box {
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(13, 13, 13, 0.95);
+    border: 2px solid var(--color-matrix-primary);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    color: var(--color-matrix-primary);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+  }
+
+  /* Speech bubble tail (pointing to the image) */
+  .chat-box::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 20px 10px 0;
+    border-style: solid;
+    border-color: transparent var(--color-matrix-primary) transparent transparent;
+  }
+
+  .chat-box::before {
+    content: '';
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 9px 18px 9px 0;
+    border-style: solid;
+    border-color: transparent rgba(13, 13, 13, 0.95) transparent transparent;
+    z-index: 1;
+  }
+
+  #chat-response-text {
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+  }
+
+  @media (max-width: 1200px) {
+    #chat-response-container {
+      left: 50%;
+      top: 260px; /* Below the 250px mobile image */
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 280px;
+    }
+
+    #chat-response-container.hidden {
+      transform: translateX(-50%) scale(0.8) translateY(-20px);
+    }
+
+    .chat-box::after {
+      left: 50%;
+      top: -20px; /* Pointing UP */
+      bottom: auto;
+      transform: translateX(-50%);
+      border-width: 0 10px 20px 10px;
+      border-color: transparent transparent var(--color-matrix-primary) transparent;
+    }
+
+    .chat-box::before {
+      left: 50%;
+      top: -17px;
+      bottom: auto;
+      transform: translateX(-50%);
+      border-width: 0 9px 18px 9px;
+      border-color: transparent transparent rgba(13, 13, 13, 0.95) transparent;
+    }
+  }
+</style>
+
+<script>
+  import { languages, defaultLang, type Language } from '../../i18n';
+
+  const chatInput = document.getElementById('chat-input') as HTMLInputElement;
+  const responseContainer = document.getElementById('chat-response-container');
+  const responseText = document.getElementById('chat-response-text');
+  let responseTimeout: any;
+
+  function getLang() {
+    return (localStorage.getItem('language') as Language) || defaultLang;
+  }
+
+  async function handleChat(e: KeyboardEvent) {
+    if (e.key === 'Enter' && chatInput.value.trim()) {
+      const query = chatInput.value.toLowerCase().trim();
+      const lang = getLang();
+      const t = languages[lang].chatbot;
+      
+      let response = t.default;
+
+      // Simple keyword matching
+      if (query.match(/hola|saludo|buenos dias|hi|hello/)) {
+        response = t.greeting;
+      } else if (query.match(/quien|quién|pablo|perfil|who/)) {
+        response = t.whoami;
+      } else if (query.match(/habilidad|sabes|haces|conocimiento|skill|stack|tecnologia/)) {
+        response = t.skills;
+      } else if (query.match(/contacto|email|correo|redes|social|linkedin|github/)) {
+        response = t.contact;
+      } else if (query.match(/experiencia|trabajo|mired|oficio/)) {
+        response = t.experience;
+      } else if (query.match(/certificado|cisco|ccna|estudio|educacion/)) {
+        response = t.certifications;
+      } else if (query.match(/problema|lema|motto/)) {
+        response = t.motto;
+      }
+
+      showResponse(response);
+      chatInput.value = '';
+    }
+  }
+
+  function showResponse(text: string) {
+    if (responseText && responseContainer) {
+      // Clear previous timeout
+      if (responseTimeout) clearTimeout(responseTimeout);
+
+      responseText.textContent = '';
+      responseContainer.classList.remove('hidden');
+
+      // Typing effect
+      let i = 0;
+      const typeEffect = setInterval(() => {
+        if (i < text.length) {
+          responseText.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(typeEffect);
+          // Auto hide after 5 seconds
+          responseTimeout = setTimeout(() => {
+            responseContainer.classList.add('hidden');
+          }, 5000);
+        }
+      }, 30);
+    }
+  }
+
+  chatInput?.addEventListener('keydown', handleChat);
+</script>
