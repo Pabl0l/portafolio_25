@@ -22,7 +22,7 @@ export const es = {
             mercenary: "Mercenario Especializado en Defensa Digital y Mitigación de Riesgos",
             exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos",
             fullstackWorker: "Obrero Fullstack para la construcción de sitios web",
-            entrenador: "Entrenador personal para la seguridad de datos"
+            entrenador: "Entrenador personal para la seguridad informática"
         }
     },
     skills: {

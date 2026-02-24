@@ -22,7 +22,7 @@ export const de = {
             mercenary: "Söldner für digitale Verteidigung und Risikominimierung",
             exterminator: "Vernichter kritischer Netzwerkfehler",
             fullstackWorker: "Fullstack-Baumeister für Webseitenerstellung",
-            entrenador: "Personalisierter Coach für Datensicherheit"
+            entrenador: "Personal Coach für IT-Sicherheit"
         }
     },
     skills: {
