@@ -166,6 +166,7 @@ export const es = {
         whoami: "Soy Pablo Olivera, técnico en sistemas y 'bug fixer' por naturaleza. Básicamente, si tiene un cable o código y está fallando, yo me encargo.",
         skills: "Domino redes (Cisco), programación (Python, JS, Java) y mantenimiento de hardware. Si el sistema está mal hecho, ya me empieza a rayar...",
         contact: "Puedes contactarme por email en jpom1310@gmail.com o encontrarme en LinkedIn y GitHub como Pabl0l. No mandes señales de humo, esas las ignoro.",
+        experience: "Actualmente soy Técnico en Mired IPS. Una vez arreglé el internet de toda una oficina en 5 minutos solo porque unos genios desconectaron el RACK para pintar la pared. Cosas de la vida.",
         certifications: "Tengo varias certificaciones de Cisco. Sé cómo configurar un router y por qué no deberías dejar que el pintor toque los cables del RACK.",
         motto: "Mi lema es: 'i hate problems so i will fix them one by one'. Es lo que guía mi trabajo diario y mi desprecio por el código sucio.",
         tools: "Dame una navaja suiza y arreglaré el mundo.",
