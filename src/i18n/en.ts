@@ -177,6 +177,13 @@ export const en = {
         status: "Hungry... hungry to take over the world.",
         movies: "My favorites are 'Don't Look Up' and 'Bugonia'. World's end is a great topic if the code is failing.",
         food: "Beef with french fries. My favorite fuel for fixing racks.",
-        hobbies: "I play LoL, Minecraft, and The Binding of Isaac. I also love nature, travel, and working out. Green is my color, obviously."
+        hobbies: "I play LoL, Minecraft, and The Binding of Isaac. I also love nature, travel, and working out. Green is my color, obviously.",
+        philosophy: "I'm a Swiss Army knife: I love learning about everything. You'll never hear me say 'I don't know' without adding 'but I'll learn it right now'. 'I can't' is not in my command dictionary.",
+        goals: "My goal is to be the best at what I do. As the verse goes: 'If you're inspired to be a shoemaker, I only want you to be the best... because a doctor is useless if he's the bad example of the town'.",
+        teamwork: "I prefer horizontal teamwork. No empty hierarchies or submission; just a group of people giving 100% for a common goal.",
+        location: "Proudly from Arauca, though I'm currently based in the 'Golden Gate', Barranquilla.",
+        failure: "To me, failure doesn't exist; it's just runtime learning.",
+        favTech: "There's a python in my boot... 🐍",
+        joke: "There are 10 types of people in the world: those who understand binary, and those who don't."
     }
 };

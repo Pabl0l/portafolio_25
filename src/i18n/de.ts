@@ -177,6 +177,13 @@ export const de = {
         status: "Hungrig... hungrig darauf, die Welt zu erobern.",
         movies: "Meine Favoriten sind 'Don't Look Up' und 'Bugonia'. Das Ende der Welt ist ein tolles Thema, wenn der Code versagt.",
         food: "Rindfleisch mit Pommes. Mein Lieblingskraftstoff für die Arbeit am Rack.",
-        hobbies: "Ich spiele LoL, Minecraft und The Binding of Isaac. Außerdem liebe ich Natur, Reisen und Sport. Grün ist meine Farbe, ganz klar."
+        hobbies: "Ich spiele LoL, Minecraft und The Binding of Isaac. Außerdem liebe ich Natur, Reisen und Sport. Grün ist meine Farbe, ganz klar.",
+        philosophy: "Ich bin ein Schweizer Taschenmesser: Ich liebe es, über alles zu lernen. Du wirst mich nie 'Ich weiß es nicht' sagen hören, ohne ein 'aber ich lerne es sofort' hinzuzufügen. 'Ich kann nicht' steht nicht in meinem Befehlswörterbuch.",
+        goals: "Mein Ziel ist es, der Beste in dem zu sein, was ich tue. Wie es im Vers heißt: 'Wenn es dich inspiriert, Schuster zu sein, möchte ich nur, dass du der Beste bist... denn ein Arzt ist nutzlos, wenn er das schlechte Beispiel der Stadt ist'.",
+        teamwork: "Ich bevorzuge horizontale Teamarbeit. Keine leeren Hierarchien oder Unterwerfung; einfach eine Gruppe von Menschen, die 100% für ein gemeinsames Ziel geben.",
+        location: "Stolz aus Arauca, obwohl ich derzeit im 'Golden Gate', Barranquilla, ansässig bin.",
+        failure: "Für mich gibt es kein Scheitern; es ist nur Lernen zur Laufzeit.",
+        favTech: "Ich habe eine Python in meinem Stiefel... 🐍",
+        joke: "Es gibt 10 Arten von Menschen auf der Welt: die, die Binär verstehen, und die, die es nicht tun."
     }
 };

@@ -7,7 +7,6 @@ import { languages, defaultLang, type Language } from '../../i18n';
 
 <div class="chatbot-container">
   <div class="terminal-input-row">
-    <span class="prompt">invitado@pablo:~$</span>
     <input type="text" id="chat-input" placeholder="..." autocomplete="off" />
   </div>
 
@@ -203,6 +202,20 @@ import { languages, defaultLang, type Language } from '../../i18n';
         response = t.food;
       } else if (query.match(/hobby|pasatiempo|ocio|lol|minecraft|isaac|juego|game|ejercicio|viajar|naturaleza|nature|color/)) {
         response = t.hobbies;
+      } else if (query.match(/especial|navaja|aprende|puedo|capaz|special|philosophy/)) {
+        response = t.philosophy;
+      } else if (query.match(/meta|objetivo|futuro|goal|target/)) {
+        response = t.goals;
+      } else if (query.match(/equipo|horizontal|comun|team/)) {
+        response = t.teamwork;
+      } else if (query.match(/donde eres|arauca|barranquilla|donde estas|vivir|live|base/)) {
+        response = t.location;
+      } else if (query.match(/fracaso|falla|error|aprendizaje|failure/)) {
+        response = t.failure;
+      } else if (query.match(/python|serpiente/)) {
+        response = t.favTech;
+      } else if (query.match(/chiste|broma|gracioso|joke/)) {
+        response = t.joke;
       } else {
         // Randomized fallback
         const defaults = Array.isArray(t.default) ? t.default : [t.default];

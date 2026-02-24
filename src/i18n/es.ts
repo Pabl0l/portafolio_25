@@ -169,7 +169,7 @@ export const es = {
         experience: "Actualmente soy Técnico en Mired IPS. Una vez arreglé el internet de toda una oficina en 5 minutos solo porque unos genios desconectaron el RACK para pintar la pared. Cosas de la vida.",
         certifications: "Tengo varias certificaciones de Cisco. Sé cómo configurar un router y por qué no deberías dejar que el pintor toque los cables del RACK.",
         motto: "Mi lema es: 'i hate problems so i will fix them one by one'. Es lo que guía mi trabajo diario y mi desprecio por el código sucio.",
-        tools: "Dame una navaja suiza y arreglaré el mundo. Fue lo que Arquímedes quiso decir, pero no tenía una Victorinox a mano.",
+        tools: "Dame una navaja suiza y arreglaré el mundo.",
         music: "Soy un melómano total. Rock, metal, jazz, dance hall, electropop... si suena bien, está en mi playlist.",
         bikes: "Las motos son mi pasión. Nada como la libertad de las dos ruedas para despejar la mente después de un día de bugs.",
         hates: "Me molestan profundamente los programas y sistemas mal hechos. La eficiencia no es una opción, es una necesidad.",
@@ -177,6 +177,13 @@ export const es = {
         status: "Con hambre... de comerme al mundo.",
         movies: "Mis favoritas son 'Don't Look Up' y 'Bugonia'. El fin del mundo es un buen tema si el código no funciona.",
         food: "Carne de res con papas francesas. Mi combustible favorito para arreglar racks.",
-        hobbies: "Juego LoL, Minecraft y The Binding of Isaac. También me flipa la naturaleza, los animales y el senderismo. Mi color favorito es el verde, por si no se nota en la terminal."
+        hobbies: "Juego LoL, Minecraft y The Binding of Isaac. También me flipa la naturaleza, los animales y el senderismo. Mi color favorito es el verde, por si no se nota en la terminal.",
+        philosophy: "Soy una navaja suiza: disfruto aprendiendo de todo. Nunca me oirás decir 'no sé' sin añadir un 'pero lo aprendo ahora mismo'. El 'no puedo' no está en mi diccionario de comandos.",
+        goals: "Mi meta es ser el mejor en lo que hago. Como dice el verso: 'Que si te inspira ser zapatero, sólo quiero que seas el mejor... porque de nada sirve el doctor si es el ejemplo malo del pueblo'.",
+        teamwork: "Prefiero el trabajo en equipo horizontal. Sin jerarquías vacías ni sumisión; solo un grupo de personas dando el 100% por un objetivo común.",
+        location: "Orgullosamente de Arauca, aunque actualmente estoy basado en la 'Puerta de Oro', Barranquilla.",
+        failure: "Para mí, el fracaso no existe, solo es aprendizaje en tiempo de ejecución.",
+        favTech: "Tengo una python en mi bota... 🐍",
+        joke: "Hay 10 tipos de personas en el mundo: las que saben binario y las que no."
     }
 };
