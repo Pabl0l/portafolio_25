@@ -18,11 +18,11 @@ export const es = {
     services: {
         title: "// Servicios",
         items: {
-            bugHunter: "Cazador de Errores, Bugs y Fallos de Sistema",
-            mercenary: "Mercenario Especializado en Defensa Digital y Mitigación de Riesgos",
-            exterminator: "Exterminador de Fallos en Redes y Sistemas Críticos",
-            fullstackWorker: "Obrero Fullstack para la construcción de sitios web",
-            entrenador: "Entrenador personal para la seguridad informática"
+            bugHunter: "Diagnóstico y Resolución de Fallos de Sistema",
+            mercenary: "Consultoría en Ciberseguridad y Mitigación de Riesgos",
+            exterminator: "Mantenimiento y Soporte de Redes e Infraestructura",
+            fullstackWorker: "Desarrollo Web Full-Stack",
+            entrenador: "Capacitación en Seguridad Informática"
         }
     },
     skills: {
@@ -30,7 +30,7 @@ export const es = {
         whoami: "$ whoami",
         whoamiText: "Soy el holotipo del llanero araucano, aproximadamente un guitarrista bohemio, un buen amigo, nómada, reservado, curioso, siempre dispuesto a aprender algo nuevo.",
         objective: "$ cat profile.txt",
-        objectiveText: "Técnico en sistemas informáticos con habilidades en reparación y mantenimiento de hardware y creación de software. Experiencia práctica en desarrollo web y configuración de equipos de red (switches/routers) y soporte técnico presencial. Habilidades blandas desarrolladas como monitor académico.",
+        objectiveText: "Técnico en Sistemas Informáticos con gran afinidad en ciberseguridad y experiencia en soporte técnico empresarial, mantenimiento de equipos y gestión básica de infraestructura de red. Destaco por tener velocidad de reacción y resolución, aprendizaje autónomo y habilidad para transmitir conocimiento técnico de forma clara. Interesado en desarrollar mis habilidades profesionales en soporte técnico y seguridad de sistemas informáticos.",
         whatAmI: "¿Qué soy, entonces?",
         descartesQuote: "«¿Qué soy, entonces? Una cosa que piensa. Y ¿qué es una cosa que piensa? Es una cosa que duda, que entiende, que afirma, que niega, que quiere, que no quiere, que imagina también, y que siente.»",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
@@ -66,12 +66,12 @@ export const es = {
             position: " Técnico en Mantenimiento y Reparación de Sistemas Informáticos",
             date: "28/10/2025 - Presente",
             responsibilities: [
-                "Instalación y reparación física de equipos",
-                "Formateo de PC, instalación de sistema operativo, creación de copias de seguridad",
-                "Configuración de redes LAN y mantenimiento de switches/routers",
-                "Soporte técnico a usuarios internos",
-                "Mantenimiento de impresoras IP",
-                "Arreglar dispositivos con solo mi presencia"
+                "Brindé soporte técnico presencial en 7 sedes de la empresa, atendiendo más de 250 equipos y asistiendo en promedio a 4 usuarios por día en entornos Windows 10/11 e impresoras de diferentes referencias.",
+                "Resolví aproximadamente el 95 % de las incidencias de manera independiente, con un tiempo promedio de respuesta y solución de 10–15 minutos.",
+                "Realicé mantenimiento preventivo y correctivo, actualizaciones de hardware, despliegue de sistemas operativos, integración al dominio, acceso y configuración básica de switches, y diagnóstico de redes incluyendo conflictos DHCP y fallas de conectividad.",
+                "Participé en intervenciones sobre racks y patch panels durante caídas del servicio.",
+                "Implementé una imagen corporativa estandarizada del sistema operativo para optimizar el despliegue de equipos y reducir tiempos de configuración.",
+                "Fui reconocido por usuarios y supervisores por mi eficiencia, claridad comunicativa, organización y confiabilidad."
             ]
         }
     },
@@ -79,14 +79,14 @@ export const es = {
         title: "// Educación",
         degree: "Técnico en Mantenimiento de Sistemas Informáticos",
         institution: "Institución Universitaria de Barranquilla",
-        status: "En prácticas",
+        status: "Egresado",
         period: "2024-04 : 2026-04"
     },
     certifications: {
         title: "// Certificaciones",
         provider: "Cisco Networking Academy",
         categories: {
-            hardware: "Hardware y Software",
+            hardware: "Hardware",
             networks: "Redes",
             cybersecurity: "Ciberseguridad",
             devdata: "Programación y Ciencia de Datos"
@@ -107,6 +107,10 @@ export const es = {
             endpoints: {
                 name: "Seguridad de Terminales",
                 date: "23 may 2025"
+            },
+            ethical_hacker: {
+                name: "Hacker Ético",
+                date: "12 may 2026"
             },
             devices: {
                 name: "Dispositivos de Red y Configuración Inicial",

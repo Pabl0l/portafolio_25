@@ -18,11 +18,11 @@ export const de = {
     services: {
         title: "// Dienstleistungen",
         items: {
-            bugHunter: "Jäger von Systemfehlern",
-            mercenary: "Söldner für digitale Verteidigung und Risikominimierung",
-            exterminator: "Vernichter kritischer Netzwerkfehler",
-            fullstackWorker: "Fullstack-Baumeister für Webseitenerstellung",
-            entrenador: "Personal Coach für IT-Sicherheit"
+            bugHunter: "Systemdiagnose und Fehlerbehebung",
+            mercenary: "Cybersicherheitsberatung und Risikominimierung",
+            exterminator: "Wartung und Support von Netzwerken und Infrastruktur",
+            fullstackWorker: "Full-Stack-Webentwicklung",
+            entrenador: "Schulung und Sensibilisierung für IT-Sicherheit"
         }
     },
     skills: {
@@ -30,7 +30,7 @@ export const de = {
         whoami: "$ whoami",
         whoamiText: "Ich bin der Holotyp des Llanero aus Arauca: ein etwas bohemischer Gitarrist, guter Freund, Nomade, zurückhaltend, neugierig und stets bereit, etwas Neues zu lernen.",
         objective: "$ cat profile.txt",
-        objectiveText: "Techniker für Computersysteme mit Fähigkeiten in Hardware-Reparatur, Wartung und Softwareentwicklung. Praxiserfahrung in Webentwicklung, Konfiguration von Netzwerkgeräten (Switches/Routern) und technischem Support vor Ort. Ausgeprägte Soft Skills durch meine Tätigkeit als akademischer Tutor.",
+        objectiveText: "Techniker für Computersysteme mit starker Affinität zur Cybersicherheit und Erfahrung im technischen IT-Support für Unternehmen, in der Gerätewartung sowie in der grundlegenden Verwaltung von Netzwerkinfrastrukturen. Ich zeichne mich durch schnelle Reaktions- und Lösungszeiten, eigenständiges Lernen und die Fähigkeit aus, technisches Wissen verständlich zu vermitteln. Ich bin daran interessiert, meine beruflichen Fähigkeiten im technischen Support und in der IT-Sicherheit weiterzuentwickeln.",
         whatAmI: "Was bin ich also?",
         descartesQuote: "„Was bin ich also? Ein Ding, das denkt. Und what ist ein Ding, das denkt? Ein Ding, das zweifelt, versteht, bejaht, verneint, will, nicht will, sich vorstellt und empfindet.“",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
@@ -66,12 +66,12 @@ export const de = {
             position: "Technischer Praktikant für Wartung und Reparatur von Computersystemen",
             date: "28.10.2025 – heute",
             responsibilities: [
-                "Physische Installation und Reparatur von Geräten",
-                "PC-Formatierung, Betriebssysteminstallation und Erstellung von Backups",
-                "LAN-Konfiguration und Wartung von Switches/Routern",
-                "Technischer Support für interne Nutzer",
-                "Wartung von IP-Druckern",
-                "Geräte allein durch meine bloße Anwesenheit reparieren"
+                "Bot technischen Vor-Ort-Support an 7 Unternehmensstandorten, betreute über 250 Geräte und unterstützte durchschnittlich 4 Nutzer pro Tag in Windows 10/11-Umgebungen sowie bei verschiedenen Druckermodellen.",
+                "Löste etwa 95 % der Vorfälle selbstständig mit einer durchschnittlichen Reaktions- und Lösungszeit von 10–15 Minuten.",
+                "Führte präventive und korrektive Wartungen, Hardware-Upgrades, Betriebssystembereitstellungen, Domänenintegrationen, grundlegenden Switch-Zugriff und -Konfiguration sowie Netzwerkdiagnosen (einschließlich DHCP-Konflikten und Verbindungsausfällen) durch.",
+                "Wirkte bei Eingriffen an Racks und Patchpanels während Serviceausfällen mit.",
+                "Implementierte ein standardisiertes Unternehmens-Betriebssystem-Image, um die Gerätebereitstellung zu optimieren und Konfigurationszeiten zu reduzieren.",
+                "Wurde von Nutzern und Vorgesetzten für meine Effizienz, klare Kommunikation, Organisation und Zuverlässigkeit anerkannt."
             ]
         }
     },
@@ -79,14 +79,14 @@ export const de = {
         title: "// Ausbildung",
         degree: "Techniker für Wartung von Computersystemen",
         institution: "Hochschule Barranquilla",
-        status: "Im Praktikum",
+        status: "Absolvent",
         period: "04.2024 – 04.2026"
     },
     certifications: {
         title: "// Zertifizierungen",
         provider: "Cisco Networking Academy",
         categories: {
-            hardware: "Hardware und Software",
+            hardware: "Hardware",
             networks: "Netzwerke",
             cybersecurity: "Cybersicherheit",
             devdata: "Programmierung und Datenwissenschaft"
@@ -107,6 +107,10 @@ export const de = {
             endpoints: {
                 name: "Endpoint Security",
                 date: "23. Mai 2025"
+            },
+            ethical_hacker: {
+                name: "Ethical Hacker",
+                date: "12. Mai 2026"
             },
             devices: {
                 name: "Network Devices and Initial Configuration",

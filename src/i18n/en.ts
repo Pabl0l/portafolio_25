@@ -18,11 +18,11 @@ export const en = {
     services: {
         title: "// Services",
         items: {
-            bugHunter: "System Error Hunter",
-            mercenary: "Mercenary Specialized in Digital Defense and Risk Mitigation",
-            exterminator: "Network Failure Exterminator",
-            fullstackWorker: "Full-Stack Builder for Website Construction",
-            entrenador: "Personal Coach for IT Security"
+            bugHunter: "System Diagnostics and Troubleshooting",
+            mercenary: "Cybersecurity Consulting and Risk Mitigation",
+            exterminator: "Network and Infrastructure Maintenance and Support",
+            fullstackWorker: "Full-Stack Web Development",
+            entrenador: "IT Security Training and Awareness"
         }
     },
     skills: {
@@ -30,7 +30,7 @@ export const en = {
         whoami: "$ whoami",
         whoamiText: "I am the holotype of the Araucanian plainsman: somewhat a bohemian guitarist, a good friend, nomadic, reserved, curious, and always willing to learn something new.",
         objective: "$ cat profile.txt",
-        objectiveText: "Computer systems technician with skills in hardware repair and maintenance, and software creation. Hands-on experience in web development, network equipment configuration (switches/routers), and on-site technical support. Soft skills developed as an academic tutor.",
+        objectiveText: "Computer Systems Technician with a strong affinity for cybersecurity and experience in corporate technical support, equipment maintenance, and basic network infrastructure management. I stand out for my quick reaction and resolution speed, autonomous learning, and ability to convey technical knowledge clearly. Interested in developing my professional skills in technical support and computer systems security.",
         whatAmI: "What am I, then?",
         descartesQuote: "\"What am I, then? A thing that thinks. And what is a thing that thinks? It is a thing that doubts, understands, affirms, denies, wills, refuses, and also imagines and perceives.\"",
         descartesCitation: "Descartes, R. (1641). Meditationes de prima philosophia.",
@@ -66,12 +66,12 @@ export const en = {
             position: "Computer Systems Maintenance and Repair Intern",
             date: "28/10/2025 - Present",
             responsibilities: [
-                "Physical installation and repair of equipment",
-                "PC formatting, operating system installation, and backup creation",
-                "LAN network configuration and switch/router maintenance",
-                "Technical support for internal users",
-                "IP printer maintenance",
-                "Fixing devices with just my presence"
+                "Provided on-site technical support across 7 company locations, maintaining over 250 devices and assisting an average of 4 users per day in Windows 10/11 environments and various printer models.",
+                "Resolved approximately 95% of incidents independently, with an average response and resolution time of 10–15 minutes.",
+                "Performed preventive and corrective maintenance, hardware upgrades, operating system deployments, domain integration, basic switch access and configuration, and network diagnostics including DHCP conflicts and connectivity failures.",
+                "Participated in interventions on racks and patch panels during service outages.",
+                "Implemented a standardized corporate operating system image to optimize device deployment and reduce configuration times.",
+                "Recognized by users and supervisors for my efficiency, clear communication, organization, and reliability."
             ]
         }
     },
@@ -79,14 +79,14 @@ export const en = {
         title: "// Education",
         degree: "Computer Systems Maintenance Technician",
         institution: "University Institution of Barranquilla",
-        status: "Currently in Internship",
+        status: "Graduated",
         period: "2024-04 : 2026-04"
     },
     certifications: {
         title: "// Certifications",
         provider: "Cisco Networking Academy",
         categories: {
-            hardware: "Hardware and Software",
+            hardware: "Hardware",
             networks: "Networking",
             cybersecurity: "Cybersecurity",
             devdata: "Programming and Data Science"
@@ -107,6 +107,10 @@ export const en = {
             endpoints: {
                 name: "Endpoint Security",
                 date: "23 May 2025"
+            },
+            ethical_hacker: {
+                name: "Ethical Hacker",
+                date: "12 May 2026"
             },
             devices: {
                 name: "Network Devices and Initial Configuration",
